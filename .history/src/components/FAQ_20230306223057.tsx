@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import FAQ_Accordion from "./FAQ_Accordion";
 
 const data = [
   {
@@ -28,7 +27,7 @@ const data = [
 const FAQ_Article = styled.article`
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: center;
   padding: 60px 10rem;
   font-family: "Poppins";
 `;
@@ -47,7 +46,7 @@ const FAQ_Article_Section_One_h1 = styled.h1`
 
   color: #282938;
 `;
-const FAQ_Article_Section_One_a = styled.a`
+const FAQ_Article_Section_One_a = styled.h1`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -65,15 +64,6 @@ const FAQ_Article_Section_One_a = styled.a`
   opacity: 0.87;
 `;
 
-const FAQ_Article_Section_Two = styled.section`
-  max-width: 843px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-content: space-between;
-  gap: 10px;
-`;
-
 const FAQ = () => {
   return (
     <FAQ_Article>
@@ -81,20 +71,19 @@ const FAQ = () => {
         <FAQ_Article_Section_One_h1>
           Frequently asked questions
         </FAQ_Article_Section_One_h1>
-        <FAQ_Article_Section_One_a href="/">
-          Contact us for more info
-        </FAQ_Article_Section_One_a>
+        <a href="/">Contact us for more info</a>
       </FAQ_Article_Section_One>
-      <FAQ_Article_Section_Two>
+      <div>
         {data.map((item, index) => (
-          <FAQ_Accordion
-            key={item.title}
-            title={item.title}
-            desc={item.desc}
-            index={index}
-          />
+          <div key={item.title}>
+            <span>0{index + 1}</span>
+            <div>
+              <h2>{item.title}+</h2>
+              <p>{item.desc}</p>
+            </div>
+          </div>
         ))}
-      </FAQ_Article_Section_Two>
+      </div>
     </FAQ_Article>
   );
 };

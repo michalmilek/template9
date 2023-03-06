@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import FAQ_Accordion from "./FAQ_Accordion";
 
@@ -28,7 +28,7 @@ const data = [
 const FAQ_Article = styled.article`
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: center;
   padding: 60px 10rem;
   font-family: "Poppins";
 `;
@@ -71,7 +71,6 @@ const FAQ_Article_Section_Two = styled.section`
   flex-direction: column;
   justify-content: start;
   align-content: space-between;
-  gap: 10px;
 `;
 
 const FAQ = () => {

@@ -45,7 +45,6 @@ const SliderArticleSectionTwo = styled.section`
   display: flex;
   flex-direction: column;
   max-width: 843px;
-  gap: 45px;
 `;
 
 const SliderArticleSectionOne_h2 = styled.h2`

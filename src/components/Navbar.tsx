@@ -12,14 +12,17 @@ const FullNav = styled.nav`
   color: #fff;
   padding-bottom: 80px;
   font-family: "Poppins";
+  justify-content: center;
+  align-items: space-between;
 `;
 
 const NavDiv = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 20px 30px;
+  justify-content: space-between;
+  padding: 20px 10rem;
   @media (max-width: 640px) {
+    padding: 20px 20px;
     justify-content: start;
     gap: 20px;
   } ;
@@ -86,11 +89,11 @@ const WhiteBars = styled(Bars)`
 const NavDivSectionTwo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 50px;
+  justify-content: space-between;
+  padding: 0 10rem;
   padding-top: 100px;
   @media (max-width: 640px) {
-    padding: 100px 10px 0;
+    padding: 100px 20px 0;
   } ;
 `;
 

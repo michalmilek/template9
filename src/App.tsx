@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs";
+import FAQ from "./components/FAQ";
 import Features from "./components/Features";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -13,6 +14,7 @@ function App() {
         <Projects />
         <Features />
         <Slider />
+        <FAQ />
       </main>
     </div>
   );

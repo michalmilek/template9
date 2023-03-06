@@ -77,6 +77,8 @@ const CustomArrowRight = styled(ArrowRight)`
 
 const SectionTwo = styled.article`
   display: grid;
+  justify-content: center;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   text-align: left;
@@ -84,6 +86,11 @@ const SectionTwo = styled.article`
   column-gap: 60px;
   max-width: 900px;
   padding-right: 10rem;
+
+  @media (max-width: 1400px) {
+    padding-right: 0rem;
+  }
+
   @media (max-width: 640px) {
     display: flex;
     flex-direction: column;

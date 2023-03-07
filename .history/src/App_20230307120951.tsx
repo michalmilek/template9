@@ -1,5 +1,4 @@
 import Blog from "components/Blog";
-import Footer from "components/Footer";
 import InquiryForm from "components/InquiryForm";
 import GlobalStyle from "globalStyles";
 import AboutUs from "./components/AboutUs";
@@ -24,7 +23,6 @@ function App() {
           <InquiryForm />
           <Blog />
         </main>
-        <Footer />
       </div>
     </>
   );

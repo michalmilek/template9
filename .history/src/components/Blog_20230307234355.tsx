@@ -63,11 +63,9 @@ const BlogArticleSection = styled.section`
   justify-content: space-between;
   align-items: start;
   flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 40px;
-
   @media (max-width: 600px) {
     flex-direction: column;
+    min-height: 600px;
     gap: 40px;
     align-items: start;
     justify-content: space-between;

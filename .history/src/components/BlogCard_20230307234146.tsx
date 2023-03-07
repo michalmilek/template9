@@ -27,7 +27,6 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
   const BlogCardDivImg = styled.img`
     position: relative;
     width: 100%;
-    height: 100%;
   `;
   const BlogCardDivDate = styled.span`
     font-style: normal;

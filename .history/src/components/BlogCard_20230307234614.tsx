@@ -15,8 +15,8 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
     gap: 30px;
     justify-content: start;
     align-items: start;
-    max-width: 405px;
-    max-height: 285px;
+    min-width: 405px;
+    min-height: 285px;
 
     @media (max-width: 1100px) {
       gap: 10px;
@@ -27,7 +27,6 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
   const BlogCardDivImg = styled.img`
     position: relative;
     width: 100%;
-    height: 100%;
   `;
   const BlogCardDivDate = styled.span`
     font-style: normal;

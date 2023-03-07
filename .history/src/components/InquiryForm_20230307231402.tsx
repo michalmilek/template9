@@ -51,7 +51,8 @@ const InquiryArticleSection = styled.section`
 
   @media (max-width: 1100px) {
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
+    flex: 3;
     padding: 60px 0;
     margin: 0;
     min-height: none;
@@ -109,8 +110,8 @@ const InquiryArticleForm = styled.form`
   flex: 1;
 
   @media (max-width: 1100px) {
-    min-height: auto;
-    padding: 50px 10%;
+    min-height: none;
+    padding: 30px 10%;
     width: 100%;
     flex: 3;
   }
@@ -124,7 +125,7 @@ const InquiryArticleH2 = styled.h2`
 
   color: #ffffff;
   @media (max-width: 1100px) {
-    align-self: start;
+    text-align: left;
   }
 `;
 const InquiryArticleP = styled.p`
@@ -137,20 +138,6 @@ const InquiryArticleP = styled.p`
   /* Grey */
 
   color: #f4f6fc;
-
-  @media (max-width: 1100px) {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 28px;
-    /* or 200% */
-
-    color: #ffffff;
-
-    opacity: 0.7;
-
-    /* Inside auto layout */
-  }
 `;
 
 const InquiryArticleInputContainer = styled.div`

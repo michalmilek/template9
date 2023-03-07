@@ -19,9 +19,9 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
     max-height: 285px;
 
     @media (max-width: 1100px) {
-      gap: 10px;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      max-width: auto;
+      max-height: auto;
     }
   `;
   const BlogCardDivImg = styled.img`

@@ -20,9 +20,9 @@ const InquiryArticle = styled.article`
   margin: 20px 0 80px;
   @media (max-width: 1100px) {
     width: auto;
+    flex: 3;
     padding: 60px 0;
     margin: 0;
-    min-height: auto;
     flex-direction: column;
   }
 `;
@@ -48,14 +48,6 @@ const InquiryArticleSection = styled.section`
     position: absolute;
     width: 100%;
   }
-
-  @media (max-width: 1100px) {
-    width: 100%;
-    min-height: 300px;
-    padding: 60px 0;
-    margin: 0;
-    min-height: none;
-  }
 `;
 const InquiryArticleSectionText = styled.div`
   display: flex;
@@ -65,7 +57,6 @@ const InquiryArticleSectionText = styled.div`
   padding: 0 18% 20px;
 `;
 const InquiryArticleSectionH1 = styled.h1`
-  display: block;
   font-style: normal;
   font-weight: 600;
   font-size: 54px;
@@ -76,13 +67,8 @@ const InquiryArticleSectionH1 = styled.h1`
 
   color: #ffffff;
   z-index: 1;
-
-  @media (max-width: 1100px) {
-    display: none;
-  }
 `;
 const InquiryArticleSectionP = styled.p`
-  display: block;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -91,10 +77,6 @@ const InquiryArticleSectionP = styled.p`
 
   color: #ffffff;
   z-index: 1;
-
-  @media (max-width: 1100px) {
-    display: none;
-  }
 `;
 const InquiryArticleForm = styled.form`
   padding: 0 10%;
@@ -109,9 +91,7 @@ const InquiryArticleForm = styled.form`
   flex: 1;
 
   @media (max-width: 1100px) {
-    min-height: auto;
-    padding: 50px 10%;
-    width: 100%;
+    width: auto;
     flex: 3;
   }
 `;
@@ -123,9 +103,6 @@ const InquiryArticleH2 = styled.h2`
   /* identical to box height, or 150% */
 
   color: #ffffff;
-  @media (max-width: 1100px) {
-    align-self: start;
-  }
 `;
 const InquiryArticleP = styled.p`
   font-style: normal;
@@ -137,20 +114,6 @@ const InquiryArticleP = styled.p`
   /* Grey */
 
   color: #f4f6fc;
-
-  @media (max-width: 1100px) {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 28px;
-    /* or 200% */
-
-    color: #ffffff;
-
-    opacity: 0.7;
-
-    /* Inside auto layout */
-  }
 `;
 
 const InquiryArticleInputContainer = styled.div`

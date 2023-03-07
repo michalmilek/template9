@@ -31,8 +31,9 @@ const BlogArticle = styled.article`
   flex-direction: column;
   gap: 50px;
   padding: 60px 10rem;
+  margin-bottom: 60px;
   @media (max-width: 700px) {
-    padding: 60px 20px 10px;
+    padding: 60px 20px;
   }
 `;
 const BlogArticleTitle = styled.h1`
@@ -62,10 +63,8 @@ const BlogArticleSection = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: start;
+  min-height: 1500px;
   flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 40px;
-
   @media (max-width: 600px) {
     flex-direction: column;
     gap: 40px;

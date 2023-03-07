@@ -51,7 +51,8 @@ const InquiryArticleSection = styled.section`
 
   @media (max-width: 1100px) {
     width: 100%;
-    min-height: 300px;
+    min-height: auto;
+    flex: 2;
     padding: 60px 0;
     margin: 0;
     min-height: none;

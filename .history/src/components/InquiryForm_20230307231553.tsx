@@ -51,7 +51,8 @@ const InquiryArticleSection = styled.section`
 
   @media (max-width: 1100px) {
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
+    flex: 3;
     padding: 60px 0;
     margin: 0;
     min-height: none;
@@ -109,8 +110,8 @@ const InquiryArticleForm = styled.form`
   flex: 1;
 
   @media (max-width: 1100px) {
-    min-height: auto;
-    padding: 50px 10%;
+    min-height: none;
+    padding: 10px 10%;
     width: 100%;
     flex: 3;
   }

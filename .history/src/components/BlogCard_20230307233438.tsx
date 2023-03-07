@@ -12,22 +12,20 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
   const BlogCardDiv = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 120px;
     justify-content: start;
     align-items: start;
     max-width: 405px;
     max-height: 285px;
 
     @media (max-width: 1100px) {
-      gap: 10px;
-      max-width: 100%;
-      max-height: 100%;
+      max-width: auto;
+      max-height: auto;
     }
   `;
   const BlogCardDivImg = styled.img`
     position: relative;
     width: 100%;
-    height: 100%;
   `;
   const BlogCardDivDate = styled.span`
     font-style: normal;

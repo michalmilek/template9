@@ -6,7 +6,7 @@ interface Btn extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   text: string;
   fontSize?: number;
   fontWeight?: number;
-  //TODO: color?: {({ theme }) => theme.colors.secondary3}
+  color?: string;
   isArrow?: boolean;
 }
 

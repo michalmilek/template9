@@ -6,11 +6,19 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
-
-
-const theme = {
+export const theme = {
   colors: {
+    powderWhite: "#FFFDF9",
+    persianGreen: "#06B49A",
+    lightBlue: "#AFDBD2",
+    onyx: "#36313D",
     secondary3: "#2405F2",
+  },
+  fonts: ["sans-serif", "Roboto"],
+  fontSizes: {
+    small: "1em",
+    medium: "2em",
+    large: "3em",
   },
 };
 

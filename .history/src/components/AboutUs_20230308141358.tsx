@@ -3,6 +3,7 @@ import { ArrowRight } from "@styled-icons/bootstrap/ArrowRight";
 import styled from "styled-components";
 import AboutUsCard from "./AboutUsCard";
 import ArrowBtn from "./simpleComponents/ArrowBtn";
+import {theme} from 
 
 const data = [
   { title: "Strategy" },
@@ -61,6 +62,7 @@ const SectionOneP = styled.article`
   /* Dark blue */
 
   color: #282938;
+
   opacity: 0.7;
 `;
 
@@ -118,7 +120,7 @@ const AboutUs = () => {
         </SectionOneP>
         <ArrowBtn
           text="Get in touch with us"
-          color={({ theme }) => theme.colors.secondary3}
+          color={props.theme.colors.secondary3}
         />
       </SectionOne>
       <SectionTwo>

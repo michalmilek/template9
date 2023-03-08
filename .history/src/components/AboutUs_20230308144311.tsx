@@ -118,7 +118,7 @@ const AboutUs = () => {
         </SectionOneP>
         <ArrowBtn
           text="Get in touch with us"
-          color={({ theme }) => theme.colors.secondary3}
+          color={({ theme }: any) => theme.colors.secondary3}
         />
       </SectionOne>
       <SectionTwo>

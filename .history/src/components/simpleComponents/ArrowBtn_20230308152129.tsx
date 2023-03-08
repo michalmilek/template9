@@ -6,7 +6,7 @@ interface Btn extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   text: string;
   fontSize?: number;
   fontWeight?: number;
-  //TODO: color?: {({ theme }) => theme.colors.secondary3}
+  color?: string;
   isArrow?: boolean;
 }
 
@@ -47,8 +47,8 @@ const ArrowBtn = ({
   `;
 
   const StyledIcon = styled(ArrowIcon)`
-    height: ${arrowHeight ? arrowHeight : 30}px;
-    width: ${arrowWidth ? arrowWidth : 30}px;
+    height: ${ah ? ah : 30}px;
+    width: ${aw ? aw : 30}px;
     fill: ${color ? color : "#000"};
   `;
 

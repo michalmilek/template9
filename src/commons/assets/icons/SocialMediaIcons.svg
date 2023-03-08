@@ -1,8 +1,4 @@
-import React from "react";
-
-const SocialMediaIcons = () => {
-  return (
-    <svg
+   <svg
       width="144"
       height="16"
       viewBox="0 0 144 16"
@@ -74,7 +70,3 @@ const SocialMediaIcons = () => {
         </clipPath>
       </defs>
     </svg>
-  );
-};
-
-export default SocialMediaIcons;

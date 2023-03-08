@@ -297,8 +297,6 @@ const InquiryForm = () => {
           text="Get in touch with us"
           color="#fff"
           fz={18}
-          ah={30}
-          aw={30}
         />
         {/*  <InquiryArticleFormA>
           Get in touch with us <ArrowIcon />

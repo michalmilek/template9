@@ -293,13 +293,7 @@ const InquiryForm = () => {
         <InquiryArticleFormBtn type="submit">
           Send an Inquiry
         </InquiryArticleFormBtn>
-        <ArrowBtn
-          text="Get in touch with us"
-          color="#fff"
-          fz={18}
-          ah={30}
-          aw={30}
-        />
+        <ArrowBtn text="Get in touch with us" />
         {/*  <InquiryArticleFormA>
           Get in touch with us <ArrowIcon />
         </InquiryArticleFormA> */}

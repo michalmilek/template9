@@ -2,8 +2,8 @@ import React from "react";
 import { useFormik } from "formik";
 import styled from "styled-components";
 import ArrowIcon from "icons/ArrowIcon";
+import InquiryArticleInput from "./simpleComponents/FormInput";
 import * as Yup from "yup";
-import ArrowBtn from "./simpleComponents/ArrowBtn";
 
 type Values = {
   name: string;
@@ -164,25 +164,6 @@ const InquiryArticleInputContainer = styled.div`
   justify-content: center;
 `;
 
-const InquiryArticleInput = styled.input`
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  background: transparent;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  padding: 10px 0 10px 8%;
-  width: 100%;
-  /* identical to box height, or 175% */
-
-  /* Grey */
-
-  color: #f4f6fc;
-
-  opacity: 0.5;
-`;
-
 const InputArticleFormError = styled.span`
   color: #fff;
 `;
@@ -219,16 +200,43 @@ const InquiryArticleFormA = styled.a`
   cursor: pointer;
 `;
 
+//CUSTOM VALIDATION
+const validate = (values: any) => {
+  const errors = {
+    name: "",
+    email: "",
+    url: "",
+  };
+  if (!values?.name) {
+    errors.name = "Required";
+  } else if (values.name.length > 15) {
+    errors.name = "Must be 15 characters or less";
+  }
+
+  if (!values.email) {
+    errors.email = "Required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Invalid email address";
+  }
+  if (!values.url) {
+    errors.url = "Required";
+  } else if (!values.email.includes("http")) {
+    errors.url = "Please paste correct URL";
+  }
+
+  return errors;
+};
+
 const InquiryForm = () => {
   const formik = useFormik<Values>({
     initialValues: { name: "", email: "", url: "" },
-    validationSchema: Yup.object({
+    /*    validationSchema: Yup.object({
       name: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       url: Yup.string().url("Invalid url").required("Required"),
-    }),
+    }), */ validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -277,7 +285,7 @@ const InquiryForm = () => {
           {formik.touched.email && formik.errors.email ? (
             <InputArticleFormError>{formik.errors.email}</InputArticleFormError>
           ) : null}
-          <InquiryArticleInput
+          <input
             type="url"
             name="url"
             id="url"
@@ -293,16 +301,9 @@ const InquiryForm = () => {
         <InquiryArticleFormBtn type="submit">
           Send an Inquiry
         </InquiryArticleFormBtn>
-        <ArrowBtn
-          text="Get in touch with us"
-          color="#fff"
-          fz={18}
-          ah={30}
-          aw={30}
-        />
-        {/*  <InquiryArticleFormA>
+        <InquiryArticleFormA>
           Get in touch with us <ArrowIcon />
-        </InquiryArticleFormA> */}
+        </InquiryArticleFormA>
       </InquiryArticleForm>
     </InquiryArticle>
   );

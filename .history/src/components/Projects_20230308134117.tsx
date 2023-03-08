@@ -249,11 +249,7 @@ const Projects = () => {
     <ProjectsArticle>
       <ProjectsArticleHeader>
         <ProjectsArticleHeaderH1>View our Projects</ProjectsArticleHeaderH1>
-        <ArrowBtn
-          text="View more"
-          aw={26}
-          ah={26}
-        />
+        <ArrowBtn text="View more" />
       </ProjectsArticleHeader>
       <ProjectsArticleSection>
         <ProjectsArticleSectionMain>

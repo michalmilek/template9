@@ -1,13 +1,13 @@
+import AcceptIcon from "icons/AcceptIcon";
+import HandsOnApproachIcon from "icons/HandsOnApproachIcon";
+import SupportIcon from "icons/SupportIcon";
+import TemplateCustomizationIcon from "icons/TemplateCustomizationIcon";
+import TimerIcon from "icons/TimerIcon";
 import React from "react";
 import styled from "styled-components";
 import FeaturesCard from "./FeaturesCard";
 
-import { ReactComponent as TimerIcon } from "../commons/assets/icons/TimerIcon.svg";
 import { ReactComponent as UsersIcon } from "../commons/assets/icons/UsersIcon.svg";
-import { ReactComponent as TemplateCustomizationIcon } from "../commons/assets/icons/TemplateCustomizationIcon.svg";
-import { ReactComponent as SupportIcon } from "../commons/assets/icons/SupportIcon.svg";
-import { ReactComponent as HandsOnApproachIcon } from "../commons/assets/icons/HandsOnApproachIcon.svg";
-import { ReactComponent as AcceptIcon } from "../commons/assets/icons/AcceptIcon.svg";
 
 const data = [
   {

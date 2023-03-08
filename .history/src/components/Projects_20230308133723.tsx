@@ -249,11 +249,9 @@ const Projects = () => {
     <ProjectsArticle>
       <ProjectsArticleHeader>
         <ProjectsArticleHeaderH1>View our Projects</ProjectsArticleHeaderH1>
-        <ArrowBtn
-          text="View more"
-          aw={26}
-          ah={26}
-        />
+        <ViewMoreBtn>
+          View more <CustomArrowRight />
+        </ViewMoreBtn>
       </ProjectsArticleHeader>
       <ProjectsArticleSection>
         <ProjectsArticleSectionMain>
@@ -269,10 +267,7 @@ const Projects = () => {
               Euismod faucibus turpis eu gravida mi. Pellentesque et velit
               aliquam.
             </ProjectsArticleSectionMainOverlayP>
-            <ArrowBtn
-              text="View more"
-              color="#FCD980"
-            />
+            <ArrowBtn text="View portfolio" />
           </ProjectsArticleSectionMainOverlay>
         </ProjectsArticleSectionMain>
         <ProjectsArticleSectionProjectsDiv>
@@ -285,10 +280,9 @@ const Projects = () => {
               <ProjectsArticleSectionMainOverlayH2>
                 Workhub office Webflow Webflow Design
               </ProjectsArticleSectionMainOverlayH2>
-              <ArrowBtn
-                text="View portfolio"
-                color="#FCD980"
-              />
+              <ProjectsArticleSectionMainOverlayBtn>
+                View portfolio <CustomArrowRightGold />
+              </ProjectsArticleSectionMainOverlayBtn>
             </ProjectsArticleSectionProjectsDivDivOverlay>
           </ProjectsArticleSectionProjectsDivDiv>
           <ProjectsArticleSectionProjectsDivDiv>
@@ -300,10 +294,9 @@ const Projects = () => {
               <ProjectsArticleSectionMainOverlayH2>
                 Unisaas Website Design
               </ProjectsArticleSectionMainOverlayH2>
-              <ArrowBtn
-                text="View portfolio"
-                color="#FCD980"
-              />
+              <ProjectsArticleSectionMainOverlayBtn>
+                View portfolio <CustomArrowRightGold />
+              </ProjectsArticleSectionMainOverlayBtn>
             </ProjectsArticleSectionProjectsDivDivOverlay>
           </ProjectsArticleSectionProjectsDivDiv>
           <ProjectsArticleSectionProjectsDivImg

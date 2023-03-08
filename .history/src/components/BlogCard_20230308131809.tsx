@@ -96,8 +96,8 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
         text="View more"
         fz={16}
         fw={500}
-        ah={30}
-        aw={30}
+        ah={50}
+        aw={50}
       />
 
       {/*  <BlogCardDivAnchor href="/">

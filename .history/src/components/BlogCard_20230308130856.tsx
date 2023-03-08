@@ -92,13 +92,7 @@ const BlogCard = ({ img, date, title, desc }: Props) => {
       <BlogCardDivTitle>{title}</BlogCardDivTitle>
       <BlogCardDivDesc>{desc}</BlogCardDivDesc>
 
-      <ArrowBtn
-        text="View more"
-        fz={16}
-        fw={500}
-        ah={30}
-        aw={30}
-      />
+      <ArrowBtn />
 
       {/*  <BlogCardDivAnchor href="/">
         Read more

@@ -298,7 +298,7 @@ const InquiryForm = () => {
           color="#fff"
           fz={18}
           ah={30}
-          aw={30}
+          aw={50}
         />
         {/*  <InquiryArticleFormA>
           Get in touch with us <ArrowIcon />

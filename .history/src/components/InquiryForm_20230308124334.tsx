@@ -3,7 +3,6 @@ import { useFormik } from "formik";
 import styled from "styled-components";
 import ArrowIcon from "icons/ArrowIcon";
 import * as Yup from "yup";
-import ArrowBtn from "./simpleComponents/ArrowBtn";
 
 type Values = {
   name: string;
@@ -293,16 +292,9 @@ const InquiryForm = () => {
         <InquiryArticleFormBtn type="submit">
           Send an Inquiry
         </InquiryArticleFormBtn>
-        <ArrowBtn
-          text="Get in touch with us"
-          color="#fff"
-          fz={18}
-          ah={30}
-          aw={30}
-        />
-        {/*  <InquiryArticleFormA>
+        <InquiryArticleFormA>
           Get in touch with us <ArrowIcon />
-        </InquiryArticleFormA> */}
+        </InquiryArticleFormA>
       </InquiryArticleForm>
     </InquiryArticle>
   );

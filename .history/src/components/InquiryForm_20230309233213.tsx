@@ -221,10 +221,6 @@ const InquiryArticleFormA = styled.a`
   cursor: pointer;
 `;
 
-const InquiryArticleFormInput1 = styled(Field)`
-  width: 100%;
-`;
-
 const InquiryForm = () => {
   const initialValues: Values = { name: "", email: "", url: "" };
   const validationSchema = Yup.object({
@@ -274,7 +270,7 @@ const InquiryForm = () => {
               eiusmod tempor incididunt ut labore.
             </InquiryArticleP>
             <InquiryArticleInputContainer>
-              <InquiryArticleFormInput1
+              <Field
                 as="input"
                 name="name"
               />
@@ -311,8 +307,6 @@ const InquiryForm = () => {
               type="submit"
               background="buttonYellow"
               borderRadius="2xl"
-              width={100}
-              py={10}
             />
             <ArrowBtn
               text="Get in touch with us"

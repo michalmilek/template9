@@ -1,5 +1,5 @@
 import React from "react";
-import { useFormik, Formik, Form, Field, ErrorMessage } from "formik";
+import { useFormik, Formik, Form } from "formik";
 import styled from "styled-components";
 import ArrowIcon from "icons/ArrowIcon";
 import * as Yup from "yup";
@@ -221,10 +221,6 @@ const InquiryArticleFormA = styled.a`
   cursor: pointer;
 `;
 
-const InquiryArticleFormInput1 = styled(Field)`
-  width: 100%;
-`;
-
 const InquiryForm = () => {
   const initialValues: Values = { name: "", email: "", url: "" };
   const validationSchema = Yup.object({
@@ -274,8 +270,10 @@ const InquiryForm = () => {
               eiusmod tempor incididunt ut labore.
             </InquiryArticleP>
             <InquiryArticleInputContainer>
-              <InquiryArticleFormInput1
-                as="input"
+              <InquiryArticleInput
+                control="input"
+                placeholder="Name"
+                type="name"
                 name="name"
               />
               {formik.touched.name && formik.errors.name ? (
@@ -311,8 +309,6 @@ const InquiryForm = () => {
               type="submit"
               background="buttonYellow"
               borderRadius="2xl"
-              width={100}
-              py={10}
             />
             <ArrowBtn
               text="Get in touch with us"

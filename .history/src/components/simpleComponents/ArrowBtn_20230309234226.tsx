@@ -59,7 +59,6 @@ const ArrowBtn = ({
   const ArrowButton = styled.button`
     font-family: "Poppins";
     display: flex;
-    justify-content: center;
     align-items: center;
     display: flex;
     background: ${color === "buttonYellow"

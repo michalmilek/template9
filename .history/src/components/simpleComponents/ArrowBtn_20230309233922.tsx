@@ -59,7 +59,6 @@ const ArrowBtn = ({
   const ArrowButton = styled.button`
     font-family: "Poppins";
     display: flex;
-    justify-content: center;
     align-items: center;
     display: flex;
     background: ${color === "buttonYellow"
@@ -126,7 +125,7 @@ const ArrowBtn = ({
 
     border: ${border ? "1px solid #a9a7a7" : ""};
     font-style: normal;
-    width: ${width ? `${width}%` : "auto"};
+    width: ${width ? `${width}px` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};
     font-size: ${fontSize === "md"
       ? ({ theme }) => theme.fontSize.md

@@ -311,8 +311,6 @@ const InquiryForm = () => {
               type="submit"
               background="buttonYellow"
               borderRadius="2xl"
-              width={100}
-              py={10}
             />
             <ArrowBtn
               text="Get in touch with us"

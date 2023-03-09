@@ -221,10 +221,6 @@ const InquiryArticleFormA = styled.a`
   cursor: pointer;
 `;
 
-const InquiryArticleFormInput1 = styled(Field)`
-  width: 100%;
-`;
-
 const InquiryForm = () => {
   const initialValues: Values = { name: "", email: "", url: "" };
   const validationSchema = Yup.object({
@@ -274,10 +270,28 @@ const InquiryForm = () => {
               eiusmod tempor incididunt ut labore.
             </InquiryArticleP>
             <InquiryArticleInputContainer>
-              <InquiryArticleFormInput1
-                as="input"
-                name="name"
-              />
+              <Field name="name">
+                {(formikField): any => {
+                  return (
+                    <>
+                      <input
+                        type="name"
+                        id="name"
+                        placeholder="name"
+                        {...formikField.field}
+                      />
+                      <ErrorMessage name="name">
+                        {(errMessage) => {
+                          return (
+                            <div style={{ color: "red" }}>{errMessage}</div>
+                          );
+                        }}
+                      </ErrorMessage>
+                      <pre>{JSON.stringify(formikField, null, 4)}</pre>
+                    </>
+                  );
+                }}
+              </Field>
               {formik.touched.name && formik.errors.name ? (
                 <InputArticleFormError>
                   {formik.errors.name}
@@ -311,8 +325,6 @@ const InquiryForm = () => {
               type="submit"
               background="buttonYellow"
               borderRadius="2xl"
-              width={100}
-              py={10}
             />
             <ArrowBtn
               text="Get in touch with us"

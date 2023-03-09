@@ -13,10 +13,8 @@ interface Btn extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: number | 30;
   arrowWidth?: number | 30;
   border?: boolean;
-  type?: btnType;
   px?: number | 2 | 4 | 6 | 8 | 10;
   py?: number | 2 | 4 | 6 | 8 | 10;
-  width?: number | 10 | 25 | 40 | 50 | 60 | 75 | 100;
 }
 
 type buttonColor =
@@ -37,15 +35,12 @@ type fontSize = "s" | "md" | "lg" | "xl" | "2xl";
 
 type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl";
 
-type btnType = "submit" | "reset";
-
 const ArrowBtn = ({
   text,
   fontSize,
   fontWeight,
   py,
   px,
-  width,
   border,
   background,
   borderRadius,
@@ -53,13 +48,11 @@ const ArrowBtn = ({
   arrowWidth,
   color,
   isArrow,
-  type,
   ...rest
 }: Btn) => {
   const ArrowButton = styled.button`
     font-family: "Poppins";
     display: flex;
-    justify-content: center;
     align-items: center;
     display: flex;
     background: ${color === "buttonYellow"
@@ -126,7 +119,6 @@ const ArrowBtn = ({
 
     border: ${border ? "1px solid #a9a7a7" : ""};
     font-style: normal;
-    width: ${width ? `${width}%` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};
     font-size: ${fontSize === "md"
       ? ({ theme }) => theme.fontSize.md
@@ -200,7 +192,7 @@ const ArrowBtn = ({
   `;
 
   return (
-    <ArrowButton type={type}>
+    <ArrowButton>
       {text}
       {isArrow && <StyledIcon />}
     </ArrowButton>

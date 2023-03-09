@@ -13,10 +13,8 @@ interface Btn extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: number | 30;
   arrowWidth?: number | 30;
   border?: boolean;
-  type?: btnType;
   px?: number | 2 | 4 | 6 | 8 | 10;
   py?: number | 2 | 4 | 6 | 8 | 10;
-  width?: number | 10 | 25 | 40 | 50 | 60 | 75 | 100;
 }
 
 type buttonColor =
@@ -45,7 +43,6 @@ const ArrowBtn = ({
   fontWeight,
   py,
   px,
-  width,
   border,
   background,
   borderRadius,
@@ -59,7 +56,6 @@ const ArrowBtn = ({
   const ArrowButton = styled.button`
     font-family: "Poppins";
     display: flex;
-    justify-content: center;
     align-items: center;
     display: flex;
     background: ${color === "buttonYellow"
@@ -126,7 +122,6 @@ const ArrowBtn = ({
 
     border: ${border ? "1px solid #a9a7a7" : ""};
     font-style: normal;
-    width: ${width ? `${width}%` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};
     font-size: ${fontSize === "md"
       ? ({ theme }) => theme.fontSize.md

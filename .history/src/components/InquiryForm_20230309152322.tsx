@@ -304,12 +304,9 @@ const InquiryForm = () => {
                 </InputArticleFormError>
               ) : null}
             </InquiryArticleInputContainer>
-            <ArrowBtn
-              text="Send an Inquiry"
-              type="submit"
-              background="buttonYellow"
-              borderRadius="2xl"
-            />
+            <InquiryArticleFormBtn type="submit">
+              Send an Inquiry
+            </InquiryArticleFormBtn>
             <ArrowBtn
               text="Get in touch with us"
               isArrow

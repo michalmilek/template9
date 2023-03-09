@@ -6,7 +6,11 @@ interface Btn extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   text: string;
   fontSize?: fontSize;
   fontWeight?: 400 | 500 | 600 | 700 | 800 | 900;
-  borderRadius?: borderRadius;
+  borderRadius?: borderSize;
+  md: "18px";
+  lg: "20px";
+  xl: "24px";
+  "2xl": "28px";
   background?: buttonColor | "transparent";
   color?: buttonColor;
   isArrow?: boolean;
@@ -31,7 +35,7 @@ type buttonColor =
 
 type fontSize = "s" | "md" | "lg" | "xl" | "2xl";
 
-//type borderSize = "s" | "md" | "lg" | "xl" | "2xl";
+type borderSize = "s" | "md" | "lg" | "xl" | "2xl";
 
 type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl";
 
@@ -48,8 +52,10 @@ const ArrowBtn = ({
   arrowWidth,
   color,
   isArrow,
-  ...rest
+  ...p
 }: Btn) => {
+
+
   const ArrowButton = styled.button`
     font-family: "Poppins";
     display: flex;
@@ -76,7 +82,7 @@ const ArrowBtn = ({
       : "transparent"};
     border: none;
     gap: 20px;
-    padding: ${py ? py : 0}px ${px ? px : 0}px;
+    padding: ${py ? py : 0} ${px ? px : 0};
     color: ${color === "buttonYellow"
       ? ({ theme }) => theme.colors.buttonYellow
       : color === "bgPrimary1"
@@ -122,8 +128,8 @@ const ArrowBtn = ({
     font-weight: ${fontWeight ? fontWeight : 500};
     font-size: ${fontSize === "md"
       ? ({ theme }) => theme.fontSize.md
-      : fontSize === "s"
-      ? ({ theme }) => theme.fontSize.s
+      : fontSize === "sm"
+      ? ({ theme }) => theme.fontSize.sm
       : fontSize === "lg"
       ? ({ theme }) => theme.fontSize.lg
       : fontSize === "xl"
@@ -200,3 +206,11 @@ const ArrowBtn = ({
 };
 
 export default ArrowBtn;
+
+
+  // ${({ color }) =>
+  //  color &&
+   // css`
+    //       color: ${({ theme }) => theme.colors[color]};
+  // `}
+//`;

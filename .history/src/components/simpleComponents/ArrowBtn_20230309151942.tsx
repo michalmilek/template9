@@ -48,7 +48,7 @@ const ArrowBtn = ({
   arrowWidth,
   color,
   isArrow,
-  ...rest
+  ...p
 }: Btn) => {
   const ArrowButton = styled.button`
     font-family: "Poppins";
@@ -76,7 +76,7 @@ const ArrowBtn = ({
       : "transparent"};
     border: none;
     gap: 20px;
-    padding: ${py ? py : 0}px ${px ? px : 0}px;
+    padding: ${py ? py : 0} ${px ? px : 0};
     color: ${color === "buttonYellow"
       ? ({ theme }) => theme.colors.buttonYellow
       : color === "bgPrimary1"
@@ -200,3 +200,11 @@ const ArrowBtn = ({
 };
 
 export default ArrowBtn;
+
+
+  // ${({ color }) =>
+  //  color &&
+   // css`
+    //       color: ${({ theme }) => theme.colors[color]};
+  // `}
+//`;

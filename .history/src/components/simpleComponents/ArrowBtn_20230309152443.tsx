@@ -48,7 +48,7 @@ const ArrowBtn = ({
   arrowWidth,
   color,
   isArrow,
-  ...rest
+  ...p
 }: Btn) => {
   const ArrowButton = styled.button`
     font-family: "Poppins";
@@ -200,3 +200,11 @@ const ArrowBtn = ({
 };
 
 export default ArrowBtn;
+
+
+  // ${({ color }) =>
+  //  color &&
+   // css`
+    //       color: ${({ theme }) => theme.colors[color]};
+  // `}
+//`;

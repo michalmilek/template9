@@ -148,8 +148,8 @@ const Header = () => {
             text="View our work"
             borderRadius="2xl"
             background="buttonYellow"
-            px={26}
-            py={12}
+            px={20}
+            py={10}
           />
           <ArrowBtn
             text="View Pricing"

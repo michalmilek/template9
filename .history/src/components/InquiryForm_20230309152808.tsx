@@ -307,8 +307,6 @@ const InquiryForm = () => {
             <ArrowBtn
               text="Send an Inquiry"
               type="submit"
-              background="buttonYellow"
-              borderRadius="2xl"
             />
             <ArrowBtn
               text="Get in touch with us"

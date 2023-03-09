@@ -146,10 +146,7 @@ const Header = () => {
         <ButtonsDiv>
           <ArrowBtn
             text="View our work"
-            borderRadius="2xl"
-            background="buttonYellow"
-            px={26}
-            py={12}
+            borderRadius="sm"
           />
           <ArrowBtn
             text="View Pricing"

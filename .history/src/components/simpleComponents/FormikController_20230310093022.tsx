@@ -2,7 +2,7 @@ import React from "react";
 import Input from "./Input";
 
 const FormikController = (props: any) => {
-  const { control, ...rest } = props;
+  const { control, component, ...rest } = props;
 
   switch (control) {
     case "input":

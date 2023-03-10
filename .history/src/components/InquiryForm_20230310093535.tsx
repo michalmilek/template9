@@ -165,6 +165,61 @@ const InquiryArticleInputContainer = styled.div`
   justify-content: center;
 `;
 
+const InquiryArticleInput = styled(FormikController)`
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 10px 0 10px 8%;
+  width: 100%;
+  /* identical to box height, or 175% */
+
+  /* Grey */
+
+  color: #f4f6fc;
+
+  opacity: 0.5;
+`;
+
+const InputArticleFormError = styled.span`
+  color: #fff;
+`;
+const InquiryArticleFormBtn = styled.button`
+  background: #fcd980;
+  border-radius: 41px;
+  width: 100%;
+  padding: 20px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  /* DARK */
+
+  color: #1b1c2b;
+  cursor: pointer;
+`;
+
+const InquiryArticleFormA = styled.a`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+
+  /* White */
+
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+`;
+
 const InquiryForm = () => {
   const initialValues: Values = { name: "", email: "", url: "" };
   const validationSchema = Yup.object({
@@ -216,21 +271,9 @@ const InquiryForm = () => {
             <InquiryArticleInputContainer>
               <FormikController
                 control="input"
-                type="name"
-                placeholder="Name"
-                name="name"
-              />
-              <FormikController
-                control="input"
-                type="emaol"
-                placeholder="Email"
+                type="email"
+                label="Email"
                 name="email"
-              />
-              <FormikController
-                control="input"
-                type="url"
-                placeholder="Paste here Figma URL"
-                name="url"
               />
             </InquiryArticleInputContainer>
             <ArrowBtn

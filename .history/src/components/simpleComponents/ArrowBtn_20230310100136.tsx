@@ -184,7 +184,6 @@ const ArrowBtn = ({
         : fontSize
         ? `${fontSize}px`
         : "16px"};
-      white-space: nowrap;
     }
   `;
 

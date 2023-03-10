@@ -1,8 +1,10 @@
 import React from "react";
 import Input from "./Input";
+import styled from "styled-components";
 
 const FormikController = (props: any) => {
-  const { control, ...rest } = props;
+  const { control, component, ...rest } = props;
+
 
   switch (control) {
     case "input":

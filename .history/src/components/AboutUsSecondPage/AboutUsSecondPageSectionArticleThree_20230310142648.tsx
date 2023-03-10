@@ -1,0 +1,46 @@
+import Typography from "components/simpleComponents/Typography";
+import React from "react";
+import AboutUsSecondPageCard from "./AboutUsSecondPageCard";
+
+const data = [
+  {
+    title: "Planning",
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+  {
+    title: "Conception",
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+  {
+    title: "Design",
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+  {
+    title: "Development",
+    desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+];
+
+const AboutUsSecondPageSectionArticleThree = () => {
+  return (
+    <article>
+      <Typography
+        type="h1"
+        fontSize="4xl"
+        text="The process we follow"
+        fontWeight={600}
+        color="darkBlue"
+      />
+      <div>
+        {data.map(({ title, desc }) => (
+          <AboutUsSecondPageCard
+            title={title}
+            desc={desc}
+          />
+        ))}
+      </div>
+    </article>
+  );
+};
+
+export default AboutUsSecondPageSectionArticleThree;

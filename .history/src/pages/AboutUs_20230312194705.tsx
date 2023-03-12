@@ -1,5 +1,4 @@
 import AboutUsSecondPageSection from "components/AboutUsSecondPage/AboutUsSecondPageSection";
-import Footer from "components/Footer";
 import MissionVision from "components/MissionVision";
 import Navbar from "components/Navbar";
 import OurTeam from "components/OurTeam";
@@ -19,7 +18,6 @@ const AboutUs = () => {
           <WorkingWithUs />
           <OurTeam />
         </main>
-        <Footer />
       </div>
     </>
   );

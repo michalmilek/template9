@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 
-
 const FeaturesCardDivH2 = styled.h2`
   font-style: normal;
   font-weight: 500;
@@ -51,7 +50,6 @@ const FeaturesCard = ({ title, desc, icon, background }: Props) => {
     padding: 40px;
     gap: 20px;
   `;
-
   return (
     <FeaturesCardDiv>
       {icon}

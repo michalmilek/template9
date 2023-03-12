@@ -33,6 +33,7 @@ const AboutUsSecondPageSectionArticleTwo = () => {
 
     @media (max-width: 1100px) {
       flex-direction: column;
+      flex: 1 1 0;
     }
   `;
   const ArticleDivDivTextContainer = styled.div`

@@ -1,7 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-
+const FeaturesCardDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-family: "Poppins";
+  max-height: 316px;
+  max-width: 405px;
+  background: #fff;
+  padding: 40px;
+  gap: 20px;
+`;
 
 const FeaturesCardDivH2 = styled.h2`
   font-style: normal;
@@ -37,21 +48,6 @@ type Props = {
 };
 
 const FeaturesCard = ({ title, desc, icon, background }: Props) => {
-  const FeaturesCardDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    font-family: "Poppins";
-    max-height: 316px;
-    max-width: 405px;
-    background: ${background === "grey"
-      ? ({ theme }) => theme.colors.bgPrimary2
-      : "#fff"};
-    padding: 40px;
-    gap: 20px;
-  `;
-
   return (
     <FeaturesCardDiv>
       {icon}

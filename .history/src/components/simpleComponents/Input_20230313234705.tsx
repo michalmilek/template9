@@ -32,6 +32,21 @@ const FieldStyled = styled.input`
   opacity: 0.5;
 `;
 
+const MyTextField = ({ type, placeholder, ...props }: InputInterface) => {
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <FieldStyled
+        type={type}
+        {...field}
+        placeholder={placeholder}
+      />
+      {meta.touched && meta.error ? (
+        <span className="error">{meta.error}</span>
+      ) : null}
+    </>
+  );
+};
 
 const Input = ({ type, placeholder, ...props }: InputInterface) => {
   const [field, meta] = useField(props);

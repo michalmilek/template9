@@ -33,12 +33,11 @@ const ErrorStyled = styled(ErrorMessage)`
   background: #fff;
 `;
 
-const MyTextField = ({ type, ...props }: any) => {
-  const [field, meta] = useField(props);
+const MyTextField = ({ label, ...props }: any) => {
+  const [field, meta, helpers] = useField(props);
   return (
     <>
       <FieldStyled
-        type={type}
         {...field}
         {...props}
       />
@@ -51,13 +50,14 @@ const MyTextField = ({ type, ...props }: any) => {
 
 const Input = (Props: FormikControllerInterface) => {
   const { name, control, ...rest } = Props;
-  const [field, meta] = useField(Props);
+  const [field, meta, helpers] = useField(Props);
 
   return (
     <FieldDiv>
       <MyTextField
+        name={name}
+        type="text"
         {...field}
-        {...meta}
         {...rest}
       />
       {/* <ErrorStyled name={name} /> */}

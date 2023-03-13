@@ -57,7 +57,6 @@ const Input = (Props: FormikControllerInterface) => {
     <FieldDiv>
       <MyTextField
         {...field}
-        {...meta}
         {...rest}
       />
       {/* <ErrorStyled name={name} /> */}

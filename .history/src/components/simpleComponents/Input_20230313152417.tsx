@@ -33,8 +33,8 @@ const ErrorStyled = styled(ErrorMessage)`
   background: #fff;
 `;
 
-const MyTextField = ({ type, ...props }: any) => {
-  const [field, meta] = useField(props);
+const MyTextField = ({ type, field, meta, ...props }: any) => {
+  //const [field, meta] = useField(props);
   return (
     <>
       <FieldStyled

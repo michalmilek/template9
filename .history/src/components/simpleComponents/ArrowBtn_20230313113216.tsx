@@ -14,44 +14,8 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   border?: boolean;
   //type?: btnType;
-  px?:
-    | 2
-    | 4
-    | 6
-    | 8
-    | 10
-    | 12
-    | 14
-    | 16
-    | 18
-    | 20
-    | 22
-    | 24
-    | 26
-    | 28
-    | 30
-    | 32
-    | 34
-    | 36;
-  py?:
-    | 2
-    | 4
-    | 6
-    | 8
-    | 10
-    | 12
-    | 14
-    | 16
-    | 18
-    | 20
-    | 22
-    | 24
-    | 26
-    | 28
-    | 30
-    | 32
-    | 34
-    | 36;
+  px?: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20;
+  py?: 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20;
   width?: 10 | 25 | 40 | 50 | 60 | 75 | 100;
   mobileFontSize?: fontSize;
 }

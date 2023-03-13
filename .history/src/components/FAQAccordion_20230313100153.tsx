@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import { height } from "styled-system";
+import styled from "styled-components";
 
 type Props = {
   title: string;
@@ -8,9 +7,28 @@ type Props = {
   index: number;
 };
 
-interface FAQAccordionQuestionAnswerProps {
-  isActive: boolean;
-}
+const FAQAccordionQuestionDiv = styled.div`
+  display: flex;
+  min-width: 843px;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding: 0 0 30px 10px;
+  border-bottom: 2px solid #ececf1;
+  cursor: pointer;
+
+  :last-of-type {
+    border: none;
+  }
+
+  :not(:first-child) {
+    padding-top: 25px;
+  }
+
+  @media (max-width: 1200px) {
+    min-width: 100%;
+    padding: 0;
+  }
+`;
 
 const FAQAccordionQuestionDivContentDiv = styled.div`
   display: flex;
@@ -33,48 +51,13 @@ const FAQAccordionQuestionDivContentDivindex = styled.span`
   color: #2405f2;
 `;
 
+
 const FAQ_Accordion = ({ title, desc, index }: Props) => {
   const [isActive, setIsActive] = useState(false);
 
-  const FAQAccordionQuestionDiv = styled.div`
-    display: flex;
-    min-width: 843px;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding: 0 0 30px 10px;
-    border-bottom: 2px solid #ececf1;
-    cursor: pointer;
-
-    :last-of-type {
-      border: none;
-    }
-
-    :not(:first-child) {
-      padding-top: 25px;
-    }
-
-    @media (max-width: 1200px) {
-      min-width: 100%;
-      padding: 0;
-    }
-  `;
-  const FAQAccordionQuestionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s cubic-bezier(0, 1, 0, 1);
-  `;
-
-  const FAQAccordionQuestionAnswer = styled.p<FAQAccordionQuestionAnswerProps>`
+  const FAQAccordionQuestionAnswer = styled.p`
     padding-top: 20px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.6s ease;
-    opacity: 0;
-
-    ${FAQAccordionQuestionDiv}:hover & {
-      max-height: 9999px;
-      opacity: 1;
-    }
+    max-height: ${isActive ? "9999px" : "0px"};
   `;
 
   return (
@@ -83,12 +66,14 @@ const FAQ_Accordion = ({ title, desc, index }: Props) => {
         <FAQAccordionQuestionDivContentDivindex>
           0{index + 1}
         </FAQAccordionQuestionDivContentDivindex>
-        <FAQAccordionQuestionContainer>
+        <div>
           <h2>{title}</h2>
-          <FAQAccordionQuestionAnswer isActive={isActive}>
+          <FAQAccordionQuestionAnswer>
             {desc}
+            {/*             {isActive ? desc : null}
+             */}{" "}
           </FAQAccordionQuestionAnswer>
-        </FAQAccordionQuestionContainer>
+        </div>
       </FAQAccordionQuestionDivContentDiv>
       {isActive ? <span>&times;</span> : <span>+</span>}
     </FAQAccordionQuestionDiv>

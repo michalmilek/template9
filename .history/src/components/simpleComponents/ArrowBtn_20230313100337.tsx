@@ -10,49 +10,13 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   background?: buttonColor | "transparent";
   color?: buttonColor;
   isArrow?: boolean;
-  arrowHeight?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
-  arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
+  arrowHeight?: number | 30;
+  arrowWidth?: number | 30;
   border?: boolean;
   //type?: btnType;
-  px?:
-    | 2
-    | 4
-    | 6
-    | 8
-    | 10
-    | 12
-    | 14
-    | 16
-    | 18
-    | 20
-    | 22
-    | 24
-    | 26
-    | 28
-    | 30
-    | 32
-    | 34
-    | 36;
-  py?:
-    | 2
-    | 4
-    | 6
-    | 8
-    | 10
-    | 12
-    | 14
-    | 16
-    | 18
-    | 20
-    | 22
-    | 24
-    | 26
-    | 28
-    | 30
-    | 32
-    | 34
-    | 36;
-  width?: 10 | 25 | 40 | 50 | 60 | 75 | 100;
+  px?: number | 2 | 4 | 6 | 8 | 10;
+  py?: number | 2 | 4 | 6 | 8 | 10;
+  width?: number | 10 | 25 | 40 | 50 | 60 | 75 | 100;
   mobileFontSize?: fontSize;
 }
 

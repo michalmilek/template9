@@ -42,7 +42,7 @@ const MissionVision = () => {
     flex-direction: column;
     gap: 20px;
   `;
-  const Img = styled.img`
+  const Img = styled.div`
     max-width: 50%;
   `;
 
@@ -70,7 +70,7 @@ const MissionVision = () => {
               fontWeight={400}
             />
           </TextContainer>
-          <Img
+          <img
             src="./Images/MissionVisionImage1.png"
             alt="Mission Vision 1"
           />
@@ -96,8 +96,8 @@ const MissionVision = () => {
               fontWeight={400}
             />
           </TextContainer>
-          <Img
-            src="Images/MissionVisionImage2.png"
+          <img
+            src="./Images/MissionVisionImage2.png"
             alt="Womens at the meeting"
           />
         </SingleArticleReverse>

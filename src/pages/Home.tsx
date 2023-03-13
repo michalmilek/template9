@@ -10,26 +10,18 @@ import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 import Slider from "../components/Slider";
 
-function App() {
+function Home() {
   return (
-    <>
-      <GlobalStyle />
-      <div className="App">
-        <Navbar />
-        <Header />
-        <main>
-          <AboutUs />
-          <Projects />
-          <Features />
-          <Slider />
-          <FAQ />
-          <InquiryForm />
-          <Blog />
-        </main>
-        <Footer />
-      </div>
-    </>
+    <main>
+      <AboutUs />
+      <Projects />
+      <Features />
+      <Slider />
+      <FAQ />
+      <InquiryForm />
+      <Blog />
+    </main>
   );
 }
 
-export default App;
+export default Home;

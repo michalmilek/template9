@@ -69,11 +69,9 @@ const FAQ_Accordion = ({ title, desc, index }: Props) => {
     max-height: 0px;
     overflow: hidden;
     transition: all 0.6s ease;
-    opacity: 0;
 
-    ${FAQAccordionQuestionDiv}:hover & {
+    &:hover {
       max-height: 9999px;
-      opacity: 1;
     }
   `;
 
@@ -86,7 +84,7 @@ const FAQ_Accordion = ({ title, desc, index }: Props) => {
         <FAQAccordionQuestionContainer>
           <h2>{title}</h2>
           <FAQAccordionQuestionAnswer isActive={isActive}>
-            {desc}
+            {isActive && desc}
           </FAQAccordionQuestionAnswer>
         </FAQAccordionQuestionContainer>
       </FAQAccordionQuestionDivContentDiv>

@@ -42,7 +42,7 @@ const MissionVision = () => {
     flex-direction: column;
     gap: 20px;
   `;
-  const Img = styled.img`
+  const Img = styled.div`
     max-width: 50%;
   `;
 

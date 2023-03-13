@@ -1,30 +1,28 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
+import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme";
-import App from "router/App";
-/* import App from "./pages/Home";
 import AboutUs from "pages/AboutUs";
 import Pricing from "pages/Pricing";
-import { ROUTES } from "router/ROUTES";
- */
-/* const router = createBrowserRouter([
+
+const router = createBrowserRouter([
   {
-    path: ROUTES.HOME,
+    path: "/",
     element: <App />,
   },
   {
-    path: ROUTES.ABOUTUS,
+    path: "aboutus",
     element: <AboutUs />,
   },
   {
-    path: ROUTES.PRICING,
+    path: "pricing",
     element: <Pricing />,
   },
-]); */
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -32,7 +30,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );

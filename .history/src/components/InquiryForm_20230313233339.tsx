@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import styled from "styled-components";
 import * as Yup from "yup";
 import ArrowBtn from "./simpleComponents/ArrowBtn";
+import FormikController from "./simpleComponents/FormikController";
 import Input from "./simpleComponents/Input";
 
 type Values = {

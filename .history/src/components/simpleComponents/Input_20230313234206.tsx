@@ -2,7 +2,7 @@ import React from "react";
 import { useField } from "formik";
 import styled from "styled-components";
 
-interface InputInterface {
+export interface InputInterface {
   type: "name" | "url" | "email";
   placeholder: string;
   name: "name" | "url" | "email";

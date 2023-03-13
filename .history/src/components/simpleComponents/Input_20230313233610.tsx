@@ -2,7 +2,7 @@ import React from "react";
 import { useField } from "formik";
 import styled from "styled-components";
 
-interface InputInterface {
+export interface InputInterface {
   type: "name" | "url" | "email";
   placeholder: string;
   name: "name" | "url" | "email";
@@ -32,14 +32,14 @@ const FieldStyled = styled.input`
   opacity: 0.5;
 `;
 
-const MyTextField = ({ type, placeholder, ...props }: InputInterface) => {
+const MyTextField = ({ type, ...props }: any) => {
   const [field, meta] = useField(props);
   return (
     <>
       <FieldStyled
         type={type}
         {...field}
-        placeholder={placeholder}
+        {...props}
       />
       {meta.touched && meta.error ? (
         <span className="error">{meta.error}</span>
@@ -48,7 +48,8 @@ const MyTextField = ({ type, placeholder, ...props }: InputInterface) => {
   );
 };
 
-const Input = (Props: InputInterface) => {
+const Input = (Props: FormikControllerInterface) => {
+  const { name, control, ...rest } = Props;
   const [field, meta] = useField(Props);
 
   return (
@@ -56,7 +57,7 @@ const Input = (Props: InputInterface) => {
       <MyTextField
         {...field}
         {...meta}
-        {...Props}
+        {...rest}
       />
       {/* <ErrorStyled name={name} /> */}
     </FieldDiv>

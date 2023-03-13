@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import styled from "styled-components";
 import * as Yup from "yup";
 import ArrowBtn from "./simpleComponents/ArrowBtn";
+import FormikController from "./simpleComponents/FormikController";
 import Input from "./simpleComponents/Input";
 
 type Values = {
@@ -219,12 +220,14 @@ const InquiryForm = () => {
                 placeholder="Name"
                 name="name"
               />
-              <Input
+              <FormikController
+                control="input"
                 type="email"
                 placeholder="Email"
                 name="email"
               />
-              <Input
+              <FormikController
+                control="input"
                 type="url"
                 placeholder="Paste here Figma URL"
                 name="url"

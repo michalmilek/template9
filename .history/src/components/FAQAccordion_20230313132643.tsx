@@ -74,15 +74,15 @@ const FAQAccordionQuestionAnswer = styled.p`
       opacity: 1;
     } */
 `;
+
 const FAQ_Accordion = ({ title, desc, index }: Props) => {
   const [isActive, setIsActive] = useState(false);
-  const accordionRef = useRef<HTMLParagraphElement>(null);
+  const accordionRef = useRef<any>(null);
 
   const TriggerAccordion = () => {
     setIsActive((prev) => !prev);
-    if (accordionRef.current) {
-      accordionRef.current.classList.toggle("active");
-    }
+    accordionRef.current.classList.toggle("active");
+    console.log(accordionRef.current.classList);
   };
 
   return (

@@ -1,13 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const SpanText = (props: TextInterface) => {
-  const { text, color, fontSize, lineHeight, fontWeight, opacity, padding } =
-    props;
+const Typography = (props: TextInterface) => {
+  const {
+    text,
+    type,
+    color,
+    fontSize,
+    lineHeight,
+    fontWeight,
+    opacity,
+    padding,
+  } = props;
 
   console.log(text);
 
-  const SpanText = styled.span`
+  const Text = styled[type]`
     color: ${color === "buttonYellow"
       ? ({ theme }) => theme.colors.buttonYellow
       : color === "bgPrimary1"
@@ -28,9 +36,9 @@ const SpanText = (props: TextInterface) => {
       ? ({ theme }) => theme.colors.darkBlue
       : "#000"};
     font-weight: ${fontWeight ? fontWeight : 500};
+    line-height: ${lineHeight ? `${lineHeight}px` : "28px"};
     opacity: ${opacity ? opacity : 1};
     padding: ${padding ? padding : 0};
-    line-height: ${lineHeight ? `${lineHeight}px` : "28px"};
     font-size: ${fontSize === "md"
       ? ({ theme }) => theme.fontSize.md
       : fontSize === "s"
@@ -49,7 +57,8 @@ const SpanText = (props: TextInterface) => {
       ? ({ theme }) => theme.fontSize["5xl"]
       : "16px"};
   `;
-  return <SpanText>{text}</SpanText>;
+
+  return <Text>{text}</Text>;
 };
 
-export default SpanText;
+export default Typography;

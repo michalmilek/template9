@@ -63,7 +63,7 @@ const Typography = (props: TextInterface) => {
 
 export default Typography;
 
-/* function getColor (color: string) {
+function getColor (color: string) {
 
   switch(color){
     case 'buttonYellow':
@@ -104,4 +104,4 @@ export default Typography;
       : color === "black"
       ? ({ theme }) => theme.colors.darkBlue
       : "#000"};
-} */
+}

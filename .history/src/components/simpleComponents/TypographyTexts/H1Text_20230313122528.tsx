@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const PText = (props: TextInterface) => {
-  const { text, color, fontSize, lineHeight, fontWeight, opacity, padding } =
+const H1Text = (props: TextInterface) => {
+  const { text, type, color, fontSize, lineHeight, fontWeight, opacity, padding } =
     props;
 
   console.log(text);
 
-  const PText = styled.p`
+  const H1Text = styled[type]`
     color: ${color === "buttonYellow"
       ? ({ theme }) => theme.colors.buttonYellow
       : color === "bgPrimary1"
@@ -49,7 +49,9 @@ const PText = (props: TextInterface) => {
       ? ({ theme }) => theme.fontSize["5xl"]
       : "16px"};
   `;
-  return <PText>{text}</PText>;
+  return <H1Text>{text}</H1Text>;
 };
 
-export default PText;
+export default H1Text;
+
+//function getColor()

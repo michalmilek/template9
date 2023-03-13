@@ -1,13 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import H1Text from "./TypographyTexts/H1Text";
+import H2Text from "./TypographyTexts/H2Text";
+import H3Text from "./TypographyTexts/H3Text";
+import H4Text from "./TypographyTexts/H4Text";
+import H5Text from "./TypographyTexts/H5Text";
+import H6Text from "./TypographyTexts/H6Text";
+import PText from "./TypographyTexts/PText";
+import SpanText from "./TypographyTexts/SpanText";
 
-const H2Text = (props: TextInterface) => {
-  const { text, color, fontSize, lineHeight, fontWeight, opacity, padding } =
-    props;
+const Typography = (props: TextInterface) => {
+  const {
+    text,
+    type,
+    color,
+    fontSize,
+    lineHeight,
+    fontWeight,
+    opacity,
+    padding,
+  } = props;
 
   console.log(text);
 
-  const H2Text = styled.h2`
+  const Text = styled[type]`
     color: ${color === "buttonYellow"
       ? ({ theme }) => theme.colors.buttonYellow
       : color === "bgPrimary1"
@@ -49,7 +65,8 @@ const H2Text = (props: TextInterface) => {
       ? ({ theme }) => theme.fontSize["5xl"]
       : "16px"};
   `;
-  return <H2Text>{text}</H2Text>;
+
+  return <Text>{text}</Text>;
 };
 
-export default H2Text;
+export default Typography;

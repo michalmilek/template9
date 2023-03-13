@@ -116,7 +116,8 @@ const Navbar = () => {
     :hover {
       color: #fff;
     }
-    &.active {
+
+    &.${(props) => props.activeClassName} {
       color: #fff;
     }
   `;

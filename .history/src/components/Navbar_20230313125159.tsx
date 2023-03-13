@@ -116,7 +116,8 @@ const Navbar = () => {
     :hover {
       color: #fff;
     }
-    &.active {
+
+    &.${(props) => props.activeClassName} {
       color: #fff;
     }
   `;
@@ -128,14 +129,14 @@ const Navbar = () => {
         <Div>
           <Ul>
             <Li>
-              <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+              <NavLink to={ROUTES.HOME}>Home</NavLink>
             </Li>
             <Li>
-              <StyledLink to={ROUTES.ABOUTUS}>About Us</StyledLink>
+              <NavLink to={ROUTES.ABOUTUS}>About Us</NavLink>
             </Li>
 
             <Li>
-              <StyledLink to={ROUTES.PRICING}>Pricing</StyledLink>
+              <NavLink to={ROUTES.PRICING}>Pricing</NavLink>
             </Li>
             <Li>
               <A href="#pricing">Pricing</A>

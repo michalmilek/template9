@@ -108,18 +108,6 @@ const WhiteBars = styled(Bars)`
 `;
 
 const Navbar = () => {
-  const StyledLink = styled(NavLink)`
-    text-decoration: none;
-    color: #bbbbcb;
-    padding: 0 5px;
-    transition: all 0.2s ease;
-    :hover {
-      color: #fff;
-    }
-    &.active {
-      color: #fff;
-    }
-  `;
   return (
     <FullNav>
       <NavDiv>
@@ -128,14 +116,14 @@ const Navbar = () => {
         <Div>
           <Ul>
             <Li>
-              <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+              <NavLink to={ROUTES.HOME}>Home</NavLink>
             </Li>
             <Li>
-              <StyledLink to={ROUTES.ABOUTUS}>About Us</StyledLink>
+              <NavLink to={ROUTES.ABOUTUS}>About Us</NavLink>
             </Li>
 
             <Li>
-              <StyledLink to={ROUTES.PRICING}>Pricing</StyledLink>
+              <NavLink to={ROUTES.PRICING}>Pricing</NavLink>
             </Li>
             <Li>
               <A href="#pricing">Pricing</A>

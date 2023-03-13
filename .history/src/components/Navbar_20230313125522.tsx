@@ -108,15 +108,18 @@ const WhiteBars = styled(Bars)`
 `;
 
 const Navbar = () => {
-  const StyledLink = styled(NavLink)`
+  const StyledLink = styled(NavLink).attrs({
+    activeClassName,
+  })`
+    &.${activeClassName} {
+      color: #fff;
+    }
+
     text-decoration: none;
     color: #bbbbcb;
     padding: 0 5px;
     transition: all 0.2s ease;
     :hover {
-      color: #fff;
-    }
-    &.active {
       color: #fff;
     }
   `;

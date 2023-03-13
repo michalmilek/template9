@@ -80,7 +80,7 @@ const FAQ_Accordion = ({ title, desc, index }: Props) => {
 
   const TriggerAccordion = () => {
     setIsActive((prev) => !prev);
-    if (accordionRef.current) {
+    if (ref.current) {
       accordionRef.current.classList.toggle("active");
     }
   };

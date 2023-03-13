@@ -206,8 +206,7 @@ const Slider = () => {
         <SliderArticleSectionOneH2>{data[0].quote}</SliderArticleSectionOneH2>
         <Slide
           {...properties}
-          autoplay={false}
-          infinite={false}>
+          autoplay={false}>
           {data.map((item) => (
             <>
               <SliderArticleSectionTwoDiv>

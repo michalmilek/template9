@@ -3,8 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { ReactComponent as ArrowLSlider } from "../commons/assets/icons/ArrowLSlider.svg";
-import { ReactComponent as ArrowRSlider } from "../commons/assets/icons/ArrowRSlider.svg";
 
 const SliderArticle = styled.article`
   display: flex;
@@ -186,11 +184,6 @@ const data = [
   },
 ];
 
-const properties = {
-  prevArrow: <ArrowLSlider style={{ left: "88%" }} />,
-  nextArrow: <ArrowRSlider />,
-};
-
 const Slider = () => {
   return (
     <SliderArticle>
@@ -203,13 +196,12 @@ const Slider = () => {
         </SliderArticleSectionOneP>
       </SliderArticleSectionOne>
       <SliderArticleSectionTwo>
-        <SliderArticleSectionOneH2>{data[0].quote}</SliderArticleSectionOneH2>
-        <Slide
-          {...properties}
-          autoplay={false}
-          infinite={false}>
+        <Slide>
           {data.map((item) => (
             <>
+              <SliderArticleSectionOneH2>
+                {item.quote}
+              </SliderArticleSectionOneH2>
               <SliderArticleSectionTwoDiv>
                 <SliderArticleSectionTwoDivDiv>
                   <SliderArticleSectionTwoDivDivImg

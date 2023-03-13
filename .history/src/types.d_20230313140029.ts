@@ -38,8 +38,7 @@ type buttonColor =
   | "buttonYellow"
   | "listItem"
   | "darkBlue"
-  | "black"
-  | "transparent";
+  | "black";
 
 type fontSize =
   | "s"
@@ -54,7 +53,7 @@ type fontSize =
 
 //type borderSize = "s" | "md" | "lg" | "xl" | "2xl";
 
-type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl";
 
 type btnType = "submit" | "reset";
 

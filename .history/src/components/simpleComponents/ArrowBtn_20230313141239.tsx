@@ -19,6 +19,7 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   border?: boolean;
+  //type?: btnType;
   px?:
     | 2
     | 4
@@ -102,7 +103,7 @@ const ArrowBtn = ({
     gap: 20px;
     padding: ${py ? py : 0}px ${px ? px : 0}px;
     color: ${getColor(color)};
-    border: ${border ? `1px solid ${getColor(color)}` : ""};
+    border: ${border ? `1px solid ${getColor(border)}` : ""};
     font-style: normal;
     width: ${width ? `${width}%` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};

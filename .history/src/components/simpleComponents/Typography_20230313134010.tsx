@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { getColor } from "./getProps";
 
 const Typography = (props: TextInterface) => {
   const {
@@ -15,7 +14,27 @@ const Typography = (props: TextInterface) => {
   } = props;
 
   console.log(text);
-
+  
+  function getColor(color: string | undefined) {
+    switch (color) {
+      case "buttonYellow":
+        return ({ theme }) => theme.colors.buttonYellow;
+      case "bgPrimary1":
+        return ({ theme }) => theme.colors.bgPrimary1;
+      case "bgPrimary2":
+        return ({ theme }) => theme.colors.bgPrimary2;
+      case "bgPrimary3":
+        return ({ theme }) => theme.colors.bgPrimary3;
+      case "darkBlue":
+        return ({ theme }) => theme.colors.darkBlue;
+      case "black":
+        return ({ theme }) => theme.colors.black;
+      case "transparent":
+        return "transparent";
+      default:
+        return ({ theme }) => theme.colors.darkBlue;
+    }
+  }
   const Text = styled[type]`
     color: ${getColor(color)};
     font-weight: ${fontWeight ? fontWeight : 500};

@@ -38,23 +38,13 @@ type buttonColor =
   | "buttonYellow"
   | "listItem"
   | "darkBlue"
-  | "black"
-  | "transparent";
+  | "black";
 
-type fontSize =
-  | "s"
-  | "md"
-  | "lg"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl"
-  | undefined;
+type fontSize = "s" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
 
 //type borderSize = "s" | "md" | "lg" | "xl" | "2xl";
 
-type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl";
 
 type btnType = "submit" | "reset";
 

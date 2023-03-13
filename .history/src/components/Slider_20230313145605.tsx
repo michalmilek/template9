@@ -187,7 +187,7 @@ const data = [
 ];
 
 const properties = {
-  prevArrow: <ArrowLSlider style={{ left: "88%" }} />,
+  prevArrow: <ArrowLSlider style={{ top: "50%", left: "50%" }} />,
   nextArrow: <ArrowRSlider />,
 };
 
@@ -204,10 +204,7 @@ const Slider = () => {
       </SliderArticleSectionOne>
       <SliderArticleSectionTwo>
         <SliderArticleSectionOneH2>{data[0].quote}</SliderArticleSectionOneH2>
-        <Slide
-          {...properties}
-          autoplay={false}
-          infinite={false}>
+        <Slide {...properties}>
           {data.map((item) => (
             <>
               <SliderArticleSectionTwoDiv>

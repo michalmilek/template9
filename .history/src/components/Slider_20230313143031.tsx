@@ -3,8 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { ReactComponent as ArrowLSlider } from "../commons/assets/icons/ArrowLSlider.svg";
-import { ReactComponent as ArrowRSlider } from "../commons/assets/icons/ArrowRSlider.svg";
 
 const SliderArticle = styled.article`
   display: flex;
@@ -155,42 +153,6 @@ const SliderArticleSectionTwoDivDivJob = styled.h4`
   color: #282938;
 `;
 
-interface Data {
-  quote: string;
-  img: string;
-  name: string;
-  job: string;
-}
-
-const data = [
-  {
-    quote:
-      "The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.",
-    img: "./images/Avatar.png",
-    name: "Jenny Wilson",
-    job: "Vice president",
-  },
-  {
-    quote:
-      "The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.",
-    img: "./images/Avatar.png",
-    name: "Jenny Wilson",
-    job: "Vice president",
-  },
-  {
-    quote:
-      "The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.",
-    img: "./images/Avatar.png",
-    name: "Jenny Wilson",
-    job: "Vice president",
-  },
-];
-
-const properties = {
-  prevArrow: <ArrowLSlider style={{ left: "88%" }} />,
-  nextArrow: <ArrowRSlider />,
-};
-
 const Slider = () => {
   return (
     <SliderArticle>
@@ -202,35 +164,32 @@ const Slider = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
         </SliderArticleSectionOneP>
       </SliderArticleSectionOne>
-      <SliderArticleSectionTwo>
-        <SliderArticleSectionOneH2>{data[0].quote}</SliderArticleSectionOneH2>
-        <Slide
-          {...properties}
-          autoplay={false}
-          infinite={false}>
-          {data.map((item) => (
-            <>
-              <SliderArticleSectionTwoDiv>
-                <SliderArticleSectionTwoDivDiv>
-                  <SliderArticleSectionTwoDivDivImg
-                    src={item.img}
-                    alt="avatar"
-                  />
-                  <SliderArticleSectionTwoDivDivPerson>
-                    <SliderArticleSectionTwoDivDivName>
-                      {item.name}
-                    </SliderArticleSectionTwoDivDivName>
-                    <SliderArticleSectionTwoDivDivJob>
-                      {item.job}
-                    </SliderArticleSectionTwoDivDivJob>
-                  </SliderArticleSectionTwoDivDivPerson>
-                </SliderArticleSectionTwoDivDiv>
-                <ArrowsIcon />
-              </SliderArticleSectionTwoDiv>
-            </>
-          ))}
-        </Slide>
-      </SliderArticleSectionTwo>
+      <Slide>
+        <SliderArticleSectionTwo>
+          <SliderArticleSectionOneH2>
+            "The best agency we’ve worked with so far. They understand our
+            product and are able to add new features with a great focus."
+          </SliderArticleSectionOneH2>
+
+          <SliderArticleSectionTwoDiv>
+            <SliderArticleSectionTwoDivDiv>
+              <SliderArticleSectionTwoDivDivImg
+                src="./images/Avatar.png"
+                alt="avatar"
+              />
+              <SliderArticleSectionTwoDivDivPerson>
+                <SliderArticleSectionTwoDivDivName>
+                  Jenny Wilson
+                </SliderArticleSectionTwoDivDivName>
+                <SliderArticleSectionTwoDivDivJob>
+                  Vice President
+                </SliderArticleSectionTwoDivDivJob>
+              </SliderArticleSectionTwoDivDivPerson>
+            </SliderArticleSectionTwoDivDiv>
+            <ArrowsIcon />
+          </SliderArticleSectionTwoDiv>
+        </SliderArticleSectionTwo>
+      </Slide>
     </SliderArticle>
   );
 };

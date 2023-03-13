@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as ArrowIcon } from "../../commons/assets/icons/ArrowIcon.svg";
-import {
-  getBackground,
-  getBorderRadius,
-  getColor,
-  getFontSize,
-} from "./getProps";
+import { getBackground, getColor, getFontSize } from "./getProps";
 
 interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
@@ -19,6 +14,7 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   border?: boolean;
+  //type?: btnType;
   px?:
     | 2
     | 4
@@ -102,7 +98,7 @@ const ArrowBtn = ({
     gap: 20px;
     padding: ${py ? py : 0}px ${px ? px : 0}px;
     color: ${getColor(color)};
-    border: ${border ? `1px solid ${getColor(color)}` : ""};
+    border: ${border ? "1px solid #a9a7a7" : ""};
     font-style: normal;
     width: ${width ? `${width}%` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};
@@ -110,7 +106,17 @@ const ArrowBtn = ({
     line-height: 28px;
     cursor: pointer;
     transition: all 0.2s ease;
-    border-radius: ${getBorderRadius(borderRadius)};
+    border-radius: ${borderRadius === "sm"
+      ? ({ theme }) => theme.borderRadius.sm
+      : borderRadius === "md"
+      ? ({ theme }) => theme.borderRadius.md
+      : borderRadius === "lg"
+      ? ({ theme }) => theme.borderRadius.lg
+      : borderRadius === "xl"
+      ? ({ theme }) => theme.borderRadius.xl
+      : borderRadius === "2xl"
+      ? ({ theme }) => theme.borderRadius["2xl"]
+      : 0};
     background: ${getBackground(background)};
     :hover {
       transform: scale(1.05);

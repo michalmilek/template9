@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as ArrowIcon } from "../../commons/assets/icons/ArrowIcon.svg";
-import {
-  getBackground,
-  getBorderRadius,
-  getColor,
-  getFontSize,
-} from "./getProps";
+import { getColor } from "./getColor";
 
 interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
@@ -19,6 +14,7 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   border?: boolean;
+  //type?: btnType;
   px?:
     | 2
     | 4
@@ -97,21 +93,77 @@ const ArrowBtn = ({
     justify-content: center;
     align-items: center;
     display: flex;
-    background: ${getColor(color)};
+    background: ${color === "buttonYellow"
+      ? ({ theme }) => theme.colors.buttonYellow
+      : color === "bgPrimary1"
+      ? ({ theme }) => theme.colors.bgPrimary1
+      : color === "bgPrimary2"
+      ? ({ theme }) => theme.colors.bgPrimary2
+      : color === "bgPrimary3"
+      ? ({ theme }) => theme.colors.bgPrimary3
+      : color === "bgSecondary1"
+      ? ({ theme }) => theme.colors.bgSecondary1
+      : color === "iconsButtons"
+      ? ({ theme }) => theme.colors.iconsButtons
+      : color === "listItem"
+      ? ({ theme }) => theme.colors.listItem
+      : color === "darkBlue"
+      ? ({ theme }) => theme.colors.darkBlue
+      : color === "black"
+      ? ({ theme }) => theme.colors.darkBlue
+      : "transparent"};
     border: none;
     gap: 20px;
     padding: ${py ? py : 0}px ${px ? px : 0}px;
     color: ${getColor(color)};
-    border: ${border ? `1px solid ${getColor(color)}` : ""};
+    border: ${border ? "1px solid #a9a7a7" : ""};
     font-style: normal;
     width: ${width ? `${width}%` : "auto"};
     font-weight: ${fontWeight ? fontWeight : 500};
-    font-size: ${getFontSize(fontSize)};
+    font-size: ${fontSize === "md"
+      ? ({ theme }) => theme.fontSize.md
+      : fontSize === "s"
+      ? ({ theme }) => theme.fontSize.s
+      : fontSize === "lg"
+      ? ({ theme }) => theme.fontSize.lg
+      : fontSize === "xl"
+      ? ({ theme }) => theme.fontSize.xl
+      : fontSize === "2xl"
+      ? ({ theme }) => theme.fontSize["2xl"]
+      : "16px"};
     line-height: 28px;
     cursor: pointer;
     transition: all 0.2s ease;
-    border-radius: ${getBorderRadius(borderRadius)};
-    background: ${getBackground(background)};
+    border-radius: ${borderRadius === "sm"
+      ? ({ theme }) => theme.borderRadius.sm
+      : borderRadius === "md"
+      ? ({ theme }) => theme.borderRadius.md
+      : borderRadius === "lg"
+      ? ({ theme }) => theme.borderRadius.lg
+      : borderRadius === "xl"
+      ? ({ theme }) => theme.borderRadius.xl
+      : borderRadius === "2xl"
+      ? ({ theme }) => theme.borderRadius["2xl"]
+      : 0};
+    background: ${background === "buttonYellow"
+      ? ({ theme }) => theme.colors.buttonYellow
+      : background === "bgPrimary1"
+      ? ({ theme }) => theme.colors.bgPrimary1
+      : background === "bgPrimary2"
+      ? ({ theme }) => theme.colors.bgPrimary2
+      : background === "bgPrimary3"
+      ? ({ theme }) => theme.colors.bgPrimary3
+      : background === "bgSecondary1"
+      ? ({ theme }) => theme.colors.bgSecondary1
+      : background === "iconsButtons"
+      ? ({ theme }) => theme.colors.iconsButtons
+      : background === "listItem"
+      ? ({ theme }) => theme.colors.listItem
+      : background === "darkBlue"
+      ? ({ theme }) => theme.colors.darkBlue
+      : background === "black"
+      ? ({ theme }) => theme.colors.black
+      : "transparent"};
     :hover {
       transform: scale(1.05);
     }

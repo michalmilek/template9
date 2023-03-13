@@ -19,6 +19,7 @@ interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrowHeight?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   arrowWidth?: 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40;
   border?: boolean;
+  //type?: btnType;
   px?:
     | 2
     | 4

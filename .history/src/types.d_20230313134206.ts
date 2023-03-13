@@ -38,23 +38,13 @@ type buttonColor =
   | "buttonYellow"
   | "listItem"
   | "darkBlue"
-  | "black"
-  | "transparent";
+  | "black";
 
-type fontSize =
-  | "s"
-  | "md"
-  | "lg"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl"
-  | undefined;
+type fontSize = "s" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
 
 //type borderSize = "s" | "md" | "lg" | "xl" | "2xl";
 
-type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+type borderRadius = "sm" | "md" | "lg" | "xl" | "2xl";
 
 type btnType = "submit" | "reset";
 
@@ -81,23 +71,23 @@ interface TeamCard {
 }
 
 interface ThemeInterface {
-  colors: {
-    bgPrimary1: string;
-    bgPrimary2: string;
-    bgPrimary3: string;
-    bgPrimary4: string;
-    bgPrimary5: string;
-    bgPrimary6: string;
-    bgSecondary1: string;
-    iconsButtons: string;
-    buttonYellow: string;
-    listItem: string;
-    black: string;
-    darkBlue: string;
-    transparent: string;
-  };
-  fontSize: {
-    s: string;
+    colors: {
+        bgPrimary1: string;
+        bgPrimary2: string;
+        bgPrimary3: string;
+        bgPrimary4: string;
+        bgPrimary5: string;
+        bgPrimary6: string;
+        bgSecondary1: string;
+        iconsButtons: string;
+        buttonYellow: string;
+        listItem: string;
+        black: string;
+        darkBlue: string;
+        transparent: string;
+    };
+    fontSize: {
+      s: string;
     md: string;
     lg: string;
     xl: string;
@@ -105,13 +95,8 @@ interface ThemeInterface {
     "3xl": string;
     "4xl": string;
     "5xl": string;
-  };
-  borderRadius: {
-    sm: "5px";
-    md: "10px";
-    lg: "15px";
-    xl: "20px";
-    "2xl": "25px";
-    full: "50%";
-  };
+    };
+    borderRadius: {
+        ...;
+    };
 }

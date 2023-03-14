@@ -91,17 +91,14 @@ const FeaturesArticleCardDiv = styled.section`
   justify-content: space-between;
   width: 100%;
   column-gap: 20px;
-  row-gap: 60px;
+  row-gap: 20px;
 
   @media (max-width: 1600px) {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
   }
 
   @media (max-width: 1135px) {
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    width: 100%;
   }
 `;
 

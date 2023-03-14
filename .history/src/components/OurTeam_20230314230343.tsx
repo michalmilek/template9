@@ -52,7 +52,7 @@ const OurTeam = () => {
     gap: 50px;
     width: 100%;
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1400px) {
       display: grid;
       justify-content: space-between;
       align-items: center;

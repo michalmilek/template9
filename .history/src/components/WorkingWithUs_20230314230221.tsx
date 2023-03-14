@@ -62,6 +62,7 @@ import styled from "styled-components";
       @media (max-width: 768px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
       }
     `;
     const Img = styled.img`

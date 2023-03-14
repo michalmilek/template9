@@ -95,12 +95,11 @@ const FeaturesArticleCardDiv = styled.section`
 
   @media (max-width: 1600px) {
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
   }
 
   @media (max-width: 1135px) {
     grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    justify-content: center;
     width: 100%;
   }
 `;

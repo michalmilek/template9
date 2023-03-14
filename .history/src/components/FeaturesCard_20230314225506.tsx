@@ -42,8 +42,8 @@ const FeaturesCard = ({ title, desc, icon, background }: Props) => {
     align-items: start;
     justify-content: center;
     font-family: "Poppins";
-    height: clamp(375px, 25vh, 500px);
-    width: clamp(350px, 25vw, 500px);
+    height: clamp(300px, 25vh, 500px);
+    width: clamp(300px, 25vw, 500px);
     background: ${background === "grey"
       ? ({ theme }) => theme.colors.bgPrimary2
       : "#fff"};

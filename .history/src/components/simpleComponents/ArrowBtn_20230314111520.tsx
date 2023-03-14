@@ -8,7 +8,7 @@ import {
   getFontSize,
 } from "./getProps";
 
-interface Btn extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface Btn extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
   fontSize?: fontSize;
   fontWeight?: 400 | 500 | 600 | 700 | 800 | 900;

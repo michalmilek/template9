@@ -34,7 +34,7 @@ const Form = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 50px 100px;
+  padding: 50px 50px;
 `;
 
 const InputContainer = styled.div`
@@ -45,14 +45,6 @@ const InputContainer = styled.div`
   row-gap: 40px;
   column-gap: 20px;
   align-items: start;
-
-  @media (max-width: 1100px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 const ButtonFixed = styled(Button)`
@@ -107,7 +99,7 @@ function ContactUsForm() {
           render={({ field }) => (
             <HookFormInput
               label="Subject"
-              placeholder="Provide context"
+              placeholder="subject"
               error={errors.subject?.message}
               {...field}
             />
@@ -133,7 +125,7 @@ function ContactUsForm() {
           render={({ field }) => (
             <TextArea
               label="Message"
-              placeholder="Write your  question here"
+              placeholder="message"
               error={errors.message?.message}
               {...field}
             />

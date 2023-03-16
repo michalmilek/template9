@@ -34,7 +34,7 @@ const Form = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 50px 100px;
+  padding: 50px 50px;
 `;
 
 const InputContainer = styled.div`
@@ -45,19 +45,14 @@ const InputContainer = styled.div`
   row-gap: 40px;
   column-gap: 20px;
   align-items: start;
-
-  @media (max-width: 1100px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
-const ButtonFixed = styled(Button)`
-  align-self: start;
-  margin-top: 30px;
+export const fields = css`
+  color: ${({ theme }) => theme.colors.black};
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 5px 10px;
+  background: transparent;
+  border-radius: 8px;
 `;
 
 function ContactUsForm() {
@@ -107,7 +102,7 @@ function ContactUsForm() {
           render={({ field }) => (
             <HookFormInput
               label="Subject"
-              placeholder="Provide context"
+              placeholder="subject"
               error={errors.subject?.message}
               {...field}
             />
@@ -133,17 +128,16 @@ function ContactUsForm() {
           render={({ field }) => (
             <TextArea
               label="Message"
-              placeholder="Write your  question here"
+              placeholder="message"
               error={errors.message?.message}
               {...field}
             />
           )}
         />
       </InputContainer>
-      <ButtonFixed
+      <Button
         variant="secondary"
         type="submit"
-        text="Send Message"
       />
     </Form>
   );

@@ -1,9 +1,15 @@
-import { forwardRef } from "react";
 import styled from "styled-components";
-import ClearInput from "./ClearInput";
+import { forwardRef } from "react";
 import { ErrorMessage } from "./styles";
 
-const Label = styled.form`
+interface TextAreaInterface1
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  name: string;
+  label: string;
+  error?: string;
+}
+
+const Label = styled.label`
   color: ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
@@ -12,38 +18,42 @@ const Label = styled.form`
   gap: 5px;
   width: 100%;
   text-align: left;
+  grid-column: span 2;
   font-weight: 500;
 `;
 
-const StyledInput = styled(ClearInput)`
+const Textarea = styled.textarea`
   color: ${({ theme }) => theme.colors.black};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 15px 20px;
+  padding: 8px 10px;
   background: transparent;
   border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
   font-weight: 400;
-  font-size: ${({ theme }) => theme.fontSize.ms};
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
   ::placeholder {
-    opacity: 1;
     color: ${({ theme }) => theme.colors.black};
   }
 `;
 
-const HookFormInput = forwardRef<HTMLInputElement, InputInterface>(
-  (props: InputInterface, ref) => {
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaInterface1>(
+  (props: TextAreaInterface1, ref) => {
     const { error, label, ...rest } = props;
     return (
       <Label>
         {label}
-        <StyledInput
-          ref={ref}
+        <Textarea
           {...rest}
+          ref={ref}
         />
-        {error && <ErrorMessage>{error}</ErrorMessage>}
+        <ErrorMessage>{error}</ErrorMessage>
       </Label>
     );
   }
 );
 
-export default HookFormInput;
+export default TextArea;

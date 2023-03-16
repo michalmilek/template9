@@ -47,11 +47,7 @@ const InputContainer = styled.div`
   align-items: start;
 
   @media (max-width: 1100px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

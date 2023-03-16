@@ -45,14 +45,6 @@ const InputContainer = styled.div`
   row-gap: 40px;
   column-gap: 20px;
   align-items: start;
-
-  @media (max-width: 1100px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 const ButtonFixed = styled(Button)`

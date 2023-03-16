@@ -25,12 +25,13 @@ const Label = styled.label`
 const SelectStyled = styled.select`
   color: ${({ theme }) => theme.colors.black};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 18px 20px;
+  padding: 15px 20px;
   background: transparent;
-  font-weight: 400;
-  font-size: ${({ theme }) => theme.fontSize.ms};
   border-radius: 8px;
   width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
 `;

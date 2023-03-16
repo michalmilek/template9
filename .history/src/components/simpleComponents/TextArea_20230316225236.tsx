@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { forwardRef } from "react";
-import { ErrorMessage } from "./styles";
 
 interface TextAreaInterface1
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -18,26 +17,20 @@ const Label = styled.label`
   gap: 5px;
   width: 100%;
   text-align: left;
-  grid-column: span 2;
-  font-weight: 500;
 `;
 
 const Textarea = styled.textarea`
   color: ${({ theme }) => theme.colors.black};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 15px 20px;
+  padding: 8px 10px;
   background: transparent;
   border-radius: 8px;
   width: 100%;
+  font-size: 16px;
   font-weight: 400;
-  font-size: ${({ theme }) => theme.fontSize.ms};
+  font-size: 16px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  min-height: 150px;
-
-  ::placeholder {
-    color: ${({ theme }) => theme.colors.black};
-  }
 `;
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaInterface1>(
@@ -50,7 +43,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaInterface1>(
           {...rest}
           ref={ref}
         />
-        <ErrorMessage>{error}</ErrorMessage>
+        {error}
       </Label>
     );
   }

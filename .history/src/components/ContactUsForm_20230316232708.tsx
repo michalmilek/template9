@@ -49,7 +49,7 @@ const InputContainer = styled.div`
   @media (max-width: 1100px) {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
   }

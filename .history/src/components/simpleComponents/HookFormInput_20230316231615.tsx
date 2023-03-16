@@ -1,3 +1,4 @@
+import { fields } from "components/ContactUsForm";
 import { forwardRef } from "react";
 import styled from "styled-components";
 import ClearInput from "./ClearInput";
@@ -22,7 +23,6 @@ const StyledInput = styled(ClearInput)`
   background: transparent;
   border-radius: 8px;
   font-weight: 400;
-  font-size: ${({ theme }) => theme.fontSize.ms};
 
   ::placeholder {
     opacity: 1;

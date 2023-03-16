@@ -1,3 +1,4 @@
+import { fields } from "components/ContactUsForm";
 import { forwardRef } from "react";
 import styled from "styled-components";
 import ClearInput from "./ClearInput";
@@ -18,11 +19,10 @@ const Label = styled.form`
 const StyledInput = styled(ClearInput)`
   color: ${({ theme }) => theme.colors.black};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 15px 20px;
+  padding: 10px 15px;
   background: transparent;
   border-radius: 8px;
   font-weight: 400;
-  font-size: ${({ theme }) => theme.fontSize.ms};
 
   ::placeholder {
     opacity: 1;

@@ -1,21 +1,22 @@
-import React from "react";
 import { useField } from "formik";
+import React from "react";
+import ClearInput from "./ClearInput";
 import styled from "styled-components";
 
 interface InputInterface extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string;
   name: string;
 }
 
-const FieldDiv = styled.div`
+const Div = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: ${({ theme }) => theme.colors.bgPrimary1};
+  color: ${({ theme }: any) => theme.colors.bgPrimary1};
   align-items: center;
   justify-content: center;
 `;
-const FieldStyled = styled.input`
+
+const FieldStyled = styled(ClearInput)`
   width: 100%;
   color: ${({ theme }) => theme.colors.black};
   border: 2px solid rgba(255, 255, 255, 0.05);
@@ -31,21 +32,19 @@ const FieldStyled = styled.input`
   opacity: 0.5;
 `;
 
-const Input = ({ type, ...props }: InputInterface) => {
+const FormikInput = ({ ...props }: InputInterface) => {
   const [field, meta] = useField(props);
-
   return (
-    <FieldDiv>
+    <Div>
       <FieldStyled
-        type={type}
         {...field}
         {...props}
       />
       {meta.touched && meta.error ? (
         <span className="error">{meta.error}</span>
       ) : null}
-    </FieldDiv>
+    </Div>
   );
 };
 
-export default Input;
+export default FormikInput;

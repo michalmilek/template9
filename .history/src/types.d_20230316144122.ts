@@ -132,5 +132,4 @@ interface InputInterface extends React.InputHTMLAttributes<HTMLInputElement> {
     subjectSelect: string;
   }>;
   error?: string;
-  label?: string;
 }

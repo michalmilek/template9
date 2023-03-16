@@ -1,7 +1,8 @@
 import React from "react";
-import { Formik, Form } from "formik";
+import { Formik, Form, useField } from "formik";
 import styled from "styled-components";
 import * as Yup from "yup";
+import Input from "./simpleComponents/Input";
 import Button from "./simpleComponents/Button";
 import ArrowAnchor from "./simpleComponents/ArrowAnchor";
 import FormikInput from "./simpleComponents/FormikInput";
@@ -177,6 +178,8 @@ const InquiryForm = () => {
   });
   const onSubmit = (values: Values) => console.log("Form data", values);
 
+  const [field, meta] = useField(props);
+
   /* const formik = useFormik<Values>({
     initialValues: { name: "", email: "", url: "" },
     validationSchema: Yup.object({
@@ -220,12 +223,12 @@ const InquiryForm = () => {
                 placeholder="Name"
                 name="name"
               />
-              <FormikInput
+              <Input
                 type="email"
                 placeholder="Email"
                 name="email"
               />
-              <FormikInput
+              <Input
                 type="url"
                 placeholder="Paste here Figma URL"
                 name="url"

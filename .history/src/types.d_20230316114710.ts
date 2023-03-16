@@ -131,6 +131,11 @@ interface InputInterface extends React.InputHTMLAttributes<HTMLInputElement> {
     subject: string;
     subjectSelect: string;
   }>;
-  error?: string;
-  label?: string;
+  errors?: FieldErrors<{
+    name: string;
+    email: string;
+    subject: string;
+    subjectSelect: string;
+    message: string;
+  }>;
 }

@@ -124,13 +124,4 @@ interface ThemeInterface {
 
 interface InputInterface extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  register?: UseFormRegister<{
-    name: string;
-    email: string;
-    message: string;
-    subject: string;
-    subjectSelect: string;
-  }>;
-  error?: string;
-  label?: string;
 }

@@ -47,7 +47,8 @@ const InputContainer = styled.div`
 
 export const fields = css`
   color: ${({ theme }) => theme.colors.black};
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: solid 1px ${({ theme }) => theme.colors.black};
+  opacity: 0.12;
   padding: 5px 10px;
   background: transparent;
   border-radius: 8px;

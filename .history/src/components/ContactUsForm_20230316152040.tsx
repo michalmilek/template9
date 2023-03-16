@@ -1,7 +1,7 @@
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import ClearInput from "./simpleComponents/ClearInput";
 import HookFormInput from "./simpleComponents/HookFormInput";
 import TextArea from "./simpleComponents/TextArea";
@@ -33,7 +33,6 @@ const Form = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 50px 50px;
 `;
 
 const InputContainer = styled.div`
@@ -41,16 +40,6 @@ const InputContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-items: start;
   width: 100%;
-  row-gap: 40px;
-  column-gap: 20px;
-`;
-
-export const fields = css`
-  color: ${({ theme }) => theme.colors.black};
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 5px 10px;
-  background: transparent;
-  border-radius: 8px;
 `;
 
 function ContactUsForm() {
@@ -113,7 +102,7 @@ function ContactUsForm() {
             <Select
               label="Subject"
               placeholder="subject"
-              options={["male", "female", "other"]}
+              arr={["male", "female", "other"]}
               error={errors.subjectSelect?.message}
               {...field}
             />

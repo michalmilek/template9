@@ -2,9 +2,9 @@ import React from "react";
 import { Formik, Form } from "formik";
 import styled from "styled-components";
 import * as Yup from "yup";
+import Input from "./simpleComponents/Input";
 import Button from "./simpleComponents/Button";
 import ArrowAnchor from "./simpleComponents/ArrowAnchor";
-import FormikInput from "./simpleComponents/FormikInput";
 
 type Values = {
   name: string;
@@ -215,17 +215,17 @@ const InquiryForm = () => {
               eiusmod tempor incididunt ut labore.
             </InquiryArticleP>
             <InquiryArticleInputContainer>
-              <FormikInput
+              <Input
                 type="text"
                 placeholder="Name"
                 name="name"
               />
-              <FormikInput
+              <Input
                 type="email"
                 placeholder="Email"
                 name="email"
               />
-              <FormikInput
+              <Input
                 type="url"
                 placeholder="Paste here Figma URL"
                 name="url"

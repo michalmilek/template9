@@ -13,11 +13,17 @@ type Inputs = {
 
 const schema = yup
   .object({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    subject: yup.string().required(),
-    subjectSelect: yup.string().required().oneOf(["female", "male", "other"]),
-    message: yup.string().required().min(5, "Must be more than 5 letters"),
+    name: yup.string().required("Required"),
+    email: yup.string().email().required("Required"),
+    subject: yup.string().required("Required"),
+    subjectSelect: yup
+      .string()
+      .required("Required")
+      .oneOf(["female", "male", "other"]),
+    message: yup
+      .string()
+      .required("Required")
+      .min(5, "Must be more than 5 letters"),
   })
   .required();
 
@@ -35,7 +41,7 @@ const Form = styled.form`
 const InputContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: start;
+  justify-items: center;
   width: 100%;
 `;
 
@@ -52,11 +58,9 @@ function ContactUsForm() {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
-    mode: "all",
   });
   const onSubmit = (data: FormData) => console.log(data);
 
@@ -69,7 +73,8 @@ function ContactUsForm() {
           <input
             placeholder="Enter your name"
             defaultValue=""
-            {...register("name")}
+            onBlur={onBlur}
+            {...(register("name"), { required: true })}
           />
           <p>{errors.name?.message}</p>
         </Label>
@@ -77,8 +82,9 @@ function ContactUsForm() {
           Email
           <input
             placeholder="Enter your email"
+            type="email"
             defaultValue=""
-            {...register("email")}
+            {...(register("email"), { required: true })}
           />
           <p>{errors.email?.message}</p>
         </Label>
@@ -86,8 +92,9 @@ function ContactUsForm() {
           Subject
           <input
             placeholder="Subject"
+            type="email"
             defaultValue=""
-            {...register("subject")}
+            {...(register("subject"), { required: true })}
           />
           <p>{errors.subject?.message}</p>
         </Label>
@@ -113,7 +120,7 @@ function ContactUsForm() {
           <textarea
             placeholder="Subject"
             defaultValue=""
-            {...register("message")}
+            {...(register("message"), { required: true })}
           />
           <p>{errors.message?.message}</p>
         </Label>

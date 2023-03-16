@@ -35,7 +35,7 @@ const Form = styled.form`
 const InputContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: start;
+  justify-items: center;
   width: 100%;
 `;
 
@@ -56,7 +56,7 @@ function ContactUsForm() {
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
-    mode: "all",
+    mode: "onBlur",
   });
   const onSubmit = (data: FormData) => console.log(data);
 

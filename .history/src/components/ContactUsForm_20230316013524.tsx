@@ -35,7 +35,7 @@ const Form = styled.form`
 const InputContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: start;
+  justify-items: center;
   width: 100%;
 `;
 
@@ -56,7 +56,7 @@ function ContactUsForm() {
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
-    mode: "all",
+    mode: "onBlur",
   });
   const onSubmit = (data: FormData) => console.log(data);
 
@@ -69,7 +69,7 @@ function ContactUsForm() {
           <input
             placeholder="Enter your name"
             defaultValue=""
-            {...register("name")}
+            {...(register("name"), { required: true })}
           />
           <p>{errors.name?.message}</p>
         </Label>
@@ -77,8 +77,9 @@ function ContactUsForm() {
           Email
           <input
             placeholder="Enter your email"
+            type="email"
             defaultValue=""
-            {...register("email")}
+            {...(register("email"), { required: true })}
           />
           <p>{errors.email?.message}</p>
         </Label>
@@ -86,8 +87,9 @@ function ContactUsForm() {
           Subject
           <input
             placeholder="Subject"
+            type="email"
             defaultValue=""
-            {...register("subject")}
+            {...(register("subject"), { required: true })}
           />
           <p>{errors.subject?.message}</p>
         </Label>
@@ -113,7 +115,7 @@ function ContactUsForm() {
           <textarea
             placeholder="Subject"
             defaultValue=""
-            {...register("message")}
+            {...(register("message"), { required: true })}
           />
           <p>{errors.message?.message}</p>
         </Label>

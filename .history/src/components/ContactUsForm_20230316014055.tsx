@@ -68,7 +68,7 @@ function ContactUsForm() {
           Name:
           <input
             placeholder="Enter your name"
-            defaultValue=""
+            defaultValue="bazant"
             {...register("name")}
           />
           <p>{errors.name?.message}</p>

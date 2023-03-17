@@ -32,7 +32,7 @@ const StyledInput = styled(ClearInput)`
 
 const HookFormInput = forwardRef<HTMLInputElement, InputInterface>(
   (props: InputInterface, ref) => {
-    const { label, ...rest } = props;
+    const { error, label, ...rest } = props;
     return (
       <Label>
         {label}
@@ -40,6 +40,7 @@ const HookFormInput = forwardRef<HTMLInputElement, InputInterface>(
           ref={ref}
           {...rest}
         />
+        {error && <ErrorMessage>{error}</ErrorMessage>}
       </Label>
     );
   }

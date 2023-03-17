@@ -30,12 +30,13 @@ const FieldStyled = styled(ClearInput)`
 
 const FormikInput = ({ ...props }: InputInterface) => {
   const [field, meta] = useField(props);
+  console.log(meta);
   return (
     <Div>
       <FieldStyled
         {...field}
         {...props}
-        error={meta.touched && meta.error ? meta.error : undefined}
+        {...meta}
       />
     </Div>
   );

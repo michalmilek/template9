@@ -35,7 +35,7 @@ const FormikInput = ({ ...props }: InputInterface) => {
       <FieldStyled
         {...field}
         {...props}
-        error={meta.touched && meta.error ? meta.error : undefined}
+        {...meta}
       />
     </Div>
   );

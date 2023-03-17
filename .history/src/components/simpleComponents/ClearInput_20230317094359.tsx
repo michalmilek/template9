@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { forwardRef } from "react";
 import { ErrorMessage } from "./styles";
+import { FieldMetaProps } from "formik";
 
 interface InputInterface1 extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
   error?: string;
+  meta?: FieldMetaProps<any>;
 }
 
 const Input = styled.input`
@@ -13,8 +15,9 @@ const Input = styled.input`
 
 const ClearInput = forwardRef<HTMLInputElement, InputInterface1>(
   (props: InputInterface1, ref) => {
-    const { error, ...rest } = props;
+    const { error, meta, ...rest } = props;
 
+    console.log(meta);
     return (
       <>
         <Input
@@ -22,6 +25,9 @@ const ClearInput = forwardRef<HTMLInputElement, InputInterface1>(
           ref={ref}
         />
         {error && <ErrorMessage>{error}</ErrorMessage>}
+        {meta && meta.touched && meta.error && (
+          <ErrorMessage>{meta.error}</ErrorMessage>
+        )}
       </>
     );
   }

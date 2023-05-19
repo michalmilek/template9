@@ -1,6 +1,12 @@
-import SocialMediaIcons from "icons/SocialMediaIcons";
+import { ReactComponent as SocialMediaIcons } from "../commons/assets/icons/SocialMediaIcons.svg";
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 const Footer = () => {
   const Finnsweet = "{Finnsweet";
@@ -17,14 +23,27 @@ const Footer = () => {
 
     @media (max-width: 768px) {
       padding: 20px 20px;
-      gap: 60px;
+      gap: 15px;
     }
   `;
   const FooterHigherDivLeft = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: start;
-    gap: 650px;
+    gap: 600px;
+
+    @media (max-width: 1308px) {
+      flex-direction: row;
+      padding: 20px 3rem;
+      gap: 150px;
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+      padding: 20px 20px;
+      gap: 40px;
+    }
   `;
   const FooterHigherDivLeftUp = styled.div`
     color: #fff;
@@ -56,6 +75,17 @@ const Footer = () => {
     padding: 20px 140px 20px 30px;
     gap: 40px;
     max-width: 700px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      padding: 20px 0;
+      max-width: auto;
+      width: 100%;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   `;
   const FooterHigherDivLeftText = styled.div`
     display: flex;
@@ -128,12 +158,22 @@ const Footer = () => {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10rem;
+    @media (max-width: 1108px) {
+      padding: 20px 3rem;
+      gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
   `;
   const FooterLowerCopyright = styled.div`
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
+    white-space: nowrap;
     /* identical to box height, or 175% */
 
     /* Dark blue */
@@ -145,6 +185,11 @@ const Footer = () => {
     list-style-type: none;
     align-items: center;
     gap: 32px;
+    white-space: nowrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   `;
   const FooterLowerListItem = styled.div`
     font-style: normal;
@@ -157,6 +202,13 @@ const Footer = () => {
     /* Dark blue */
 
     color: #282938;
+
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   `;
   return (
     <Footer>
@@ -206,7 +258,9 @@ const Footer = () => {
         </FooterLowerCopyright>
 
         <FooterLowerList>
-          <FooterLowerListItem>Home</FooterLowerListItem>
+          <FooterLowerListItem>
+            <StyledLink to="/">Home</StyledLink>
+          </FooterLowerListItem>
           <FooterLowerListItem>About Us</FooterLowerListItem>
           <FooterLowerListItem>Features</FooterLowerListItem>
           <FooterLowerListItem>Pricing</FooterLowerListItem>

@@ -1,6 +1,13 @@
-import SocialMediaIcons from "icons/SocialMediaIcons";
+import { ReactComponent as SocialMediaIcons } from "../commons/assets/icons/SocialMediaIcons.svg";
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ROUTES } from "router/ROUTES";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 const Footer = () => {
   const Finnsweet = "{Finnsweet";
@@ -11,21 +18,33 @@ const Footer = () => {
   `;
   const FooterHigherDiv = styled.div`
     display: flex;
+    flex-direction: column;
     background: #1c1e53;
     padding: 60px 10rem 0;
-    gap: 300px;
 
     @media (max-width: 768px) {
-      flex-direction: column;
       padding: 20px 20px;
+      gap: 15px;
     }
   `;
   const FooterHigherDivLeft = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    flex-direction: row;
+    justify-content: start;
     align-items: start;
-    gap: 86px;
+    gap: 600px;
+
+    @media (max-width: 1308px) {
+      flex-direction: row;
+      padding: 20px 3rem;
+      gap: 150px;
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+      padding: 20px 20px;
+      gap: 40px;
+    }
   `;
   const FooterHigherDivLeftUp = styled.div`
     color: #fff;
@@ -56,6 +75,18 @@ const Footer = () => {
     justify-content: start;
     padding: 20px 140px 20px 30px;
     gap: 40px;
+    max-width: 700px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      padding: 20px 0;
+      max-width: auto;
+      width: 100%;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   `;
   const FooterHigherDivLeftText = styled.div`
     display: flex;
@@ -128,12 +159,22 @@ const Footer = () => {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10rem;
+    @media (max-width: 1108px) {
+      padding: 20px 3rem;
+      gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
   `;
   const FooterLowerCopyright = styled.div`
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
+    white-space: nowrap;
     /* identical to box height, or 175% */
 
     /* Dark blue */
@@ -145,6 +186,11 @@ const Footer = () => {
     list-style-type: none;
     align-items: center;
     gap: 32px;
+    white-space: nowrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   `;
   const FooterLowerListItem = styled.div`
     font-style: normal;
@@ -157,6 +203,13 @@ const Footer = () => {
     /* Dark blue */
 
     color: #282938;
+
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   `;
   return (
     <Footer>
@@ -169,35 +222,36 @@ const Footer = () => {
               presence.
             </FooterHigherDivLeftDesc>
           </FooterHigherDivLeftUp>
-          <FooterHigherDivLeftDown>
-            <FooterHigherDivLeftText>
-              <FooterHigherDivLeftTextStrong>
-                Email me at
-              </FooterHigherDivLeftTextStrong>
-              <FooterHigherDivLeftTextLight>
-                contact@website.com
-              </FooterHigherDivLeftTextLight>
-            </FooterHigherDivLeftText>
-            <FooterHigherDivLeftText>
-              <FooterHigherDivLeftTextStrong>
-                Call us
-              </FooterHigherDivLeftTextStrong>
-              <FooterHigherDivLeftTextLight>
-                0927 6277 28525
-              </FooterHigherDivLeftTextLight>
-            </FooterHigherDivLeftText>
-          </FooterHigherDivLeftDown>
+          <FooterHigherDivRight>
+            <FooterHigherDivTitle>Lets Talk!</FooterHigherDivTitle>
+            <FooterHigherDivDesc>
+              We are always open to discuss your project, improve your online
+              presence and help with your UX/UI design challenges.
+            </FooterHigherDivDesc>
+            <FooterSocialMediaIconsDiv>
+              <SocialMediaIcons />
+            </FooterSocialMediaIconsDiv>
+          </FooterHigherDivRight>
         </FooterHigherDivLeft>
-        <FooterHigherDivRight>
-          <FooterHigherDivTitle>Lets Talk!</FooterHigherDivTitle>
-          <FooterHigherDivDesc>
-            We are always open to discuss your project, improve your online
-            presence and help with your UX/UI design challenges.
-          </FooterHigherDivDesc>
-          <FooterSocialMediaIconsDiv>
-            <SocialMediaIcons />
-          </FooterSocialMediaIconsDiv>
-        </FooterHigherDivRight>
+        <FooterHigherDivLeftDown>
+          <FooterHigherDivLeftText>
+            <FooterHigherDivLeftTextStrong>
+              Email me at
+            </FooterHigherDivLeftTextStrong>
+            <FooterHigherDivLeftTextLight>
+              contact@website.com
+            </FooterHigherDivLeftTextLight>
+          </FooterHigherDivLeftText>
+
+          <FooterHigherDivLeftText>
+            <FooterHigherDivLeftTextStrong>
+              Call us
+            </FooterHigherDivLeftTextStrong>
+            <FooterHigherDivLeftTextLight>
+              0927 6277 28525
+            </FooterHigherDivLeftTextLight>
+          </FooterHigherDivLeftText>
+        </FooterHigherDivLeftDown>
       </FooterHigherDiv>
       <FooterLowerDiv>
         <FooterLowerCopyright>
@@ -205,10 +259,17 @@ const Footer = () => {
         </FooterLowerCopyright>
 
         <FooterLowerList>
-          <FooterLowerListItem>Home</FooterLowerListItem>
-          <FooterLowerListItem>About Us</FooterLowerListItem>
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+          </FooterLowerListItem>
+
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.ABOUTUS}>About Us</StyledLink>
+          </FooterLowerListItem>
           <FooterLowerListItem>Features</FooterLowerListItem>
-          <FooterLowerListItem>Pricing</FooterLowerListItem>
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.CONTACTUS}>Pricing</StyledLink>
+          </FooterLowerListItem>
           <FooterLowerListItem>FAQ</FooterLowerListItem>
           <FooterLowerListItem>Blog</FooterLowerListItem>
         </FooterLowerList>

@@ -1,6 +1,11 @@
-import SocialMediaIcons from "icons/SocialMediaIcons";
+import { ReactComponent as SocialMediaIcons } from "../commons/assets/icons/SocialMediaIcons.svg";
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const Footer = () => {
   const Finnsweet = "{Finnsweet";
@@ -27,14 +32,15 @@ const Footer = () => {
     align-items: start;
     gap: 600px;
 
-    /*     @media (max-width: 1308px) {
+    @media (max-width: 1308px) {
       flex-direction: row;
       padding: 20px 3rem;
       gap: 150px;
-    } */
+    }
 
-    @media (max-width: 7680px) {
+    @media (max-width: 760px) {
       flex-direction: column;
+      padding: 20px 20px;
       gap: 40px;
     }
   `;
@@ -195,6 +201,13 @@ const Footer = () => {
     /* Dark blue */
 
     color: #282938;
+
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   `;
   return (
     <Footer>
@@ -244,7 +257,9 @@ const Footer = () => {
         </FooterLowerCopyright>
 
         <FooterLowerList>
-          <FooterLowerListItem>Home</FooterLowerListItem>
+          <StyledLink to="/">
+            <FooterLowerListItem>Home</FooterLowerListItem>
+          </StyledLink>
           <FooterLowerListItem>About Us</FooterLowerListItem>
           <FooterLowerListItem>Features</FooterLowerListItem>
           <FooterLowerListItem>Pricing</FooterLowerListItem>

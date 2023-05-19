@@ -1,6 +1,13 @@
 import { ReactComponent as SocialMediaIcons } from "../commons/assets/icons/SocialMediaIcons.svg";
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ROUTES } from "router/ROUTES";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 const Footer = () => {
   const Finnsweet = "{Finnsweet";
@@ -252,10 +259,17 @@ const Footer = () => {
         </FooterLowerCopyright>
 
         <FooterLowerList>
-          <FooterLowerListItem>Home</FooterLowerListItem>
-          <FooterLowerListItem>About Us</FooterLowerListItem>
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+          </FooterLowerListItem>
+
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.ABOUTUS}>About Us</StyledLink>
+          </FooterLowerListItem>
           <FooterLowerListItem>Features</FooterLowerListItem>
-          <FooterLowerListItem>Pricing</FooterLowerListItem>
+          <FooterLowerListItem>
+            <StyledLink to={ROUTES.PRICING}>Pricing</StyledLink>
+          </FooterLowerListItem>
           <FooterLowerListItem>FAQ</FooterLowerListItem>
           <FooterLowerListItem>Blog</FooterLowerListItem>
         </FooterLowerList>

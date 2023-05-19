@@ -279,7 +279,7 @@ const Projects = () => {
         <ProjectsArticleSectionProjectsDiv>
           <ProjectsArticleSectionProjectsDivDiv>
             <ProjectsArticleSectionProjectsDivDivImg
-              src="/images/Card.png"
+              src="./images/Card.png"
               alt="project card mini 1"
             />
             <ProjectsArticleSectionProjectsDivDivOverlay>
@@ -295,7 +295,7 @@ const Projects = () => {
           </ProjectsArticleSectionProjectsDivDiv>
           <ProjectsArticleSectionProjectsDivDiv>
             <ProjectsArticleSectionProjectsDivDivImg
-              src="/images/projectCard1.png"
+              src="./images/projectCard1.png"
               alt="project card mini 2"
             />
             <ProjectsArticleSectionProjectsDivDivOverlay>
@@ -310,7 +310,7 @@ const Projects = () => {
             </ProjectsArticleSectionProjectsDivDivOverlay>
           </ProjectsArticleSectionProjectsDivDiv>
           <ProjectsArticleSectionProjectsDivImg
-            src="/images/projectCard2.png"
+            src="./images/projectCard2.png"
             alt="project card mini 3"
           />
         </ProjectsArticleSectionProjectsDiv>

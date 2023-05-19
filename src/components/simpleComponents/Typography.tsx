@@ -16,7 +16,6 @@ const Typography = (props: TextInterface) => {
     maxWidth,
   } = props;
 
-  console.log(text);
 
   const Text = styled[type]`
     color: ${getColor(color)};

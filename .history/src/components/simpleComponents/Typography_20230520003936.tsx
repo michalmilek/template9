@@ -13,9 +13,9 @@ const Typography = (props: TextInterface) => {
     opacity,
     padding,
     mobileFontSize,
+    maxWidth,
   } = props;
 
-  console.log(text);
 
   const Text = styled[type]`
     color: ${getColor(color)};
@@ -24,9 +24,13 @@ const Typography = (props: TextInterface) => {
     opacity: ${opacity ? opacity : 1};
     padding: ${padding ? padding : 0};
     font-size: ${getFontSize(fontSize)};
+    z-index: 10;
+    max-width: ${maxWidth};
 
     @media (max-width: 1100px) {
-      font-size: ${getFontSize(mobileFontSize)};
+      font-size: ${mobileFontSize
+        ? getFontSize(mobileFontSize)
+        : getFontSize(fontSize)};
     }
   `;
 

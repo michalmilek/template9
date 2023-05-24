@@ -5,3 +5,6 @@ Practice project from template
 
 <p align="justify">Project carried out at the practice. The working pages are home, about us, pricing and contact us. Styling was done with styled components, formik and react hook form were used for forms, yup for validation. Separate inputs were made for both libraries, linked to the forms with a hook. Styling with styled-components.</p>
 
+<img src="https://github.com/michalmilek/template9/blob/main/img1.png" />
+<img src="https://github.com/michalmilek/template9/blob/main/img2.png" />
+<img src="https://github.com/michalmilek/template9/blob/main/img3.png" />
